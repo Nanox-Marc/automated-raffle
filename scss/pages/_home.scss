@@ -1,0 +1,249 @@
+body {
+  height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  background-image: url(../assets/background.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home {
+  .raffle-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+
+    .nanox-logo {
+      max-width: 230px;
+      filter: brightness(0) invert(1);
+      margin-bottom: 50px;
+    }
+
+    .hide {
+      display: none;
+    }
+
+    .file-name {
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+
+    .total-label {
+      padding-top: 10px;
+      padding-bottom: 30px;
+    }
+
+    .raffle-prize {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 50px;
+      text-align: center;
+      text-transform: uppercase;
+      width: 75%;
+    }
+
+    .btn-random {
+      width: 75%;
+      background-color: goldenrod;
+      color: white;
+      text-transform: uppercase;
+      font-size: 25px;
+    }
+  }
+}
+
+.modal-winners {
+  .modal-dialog {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .modal-content {
+      width: 1100px;
+    }
+  }
+}
+
+.modal-random {
+  .modal-dialog {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .modal-content {
+      width: 1100px;
+
+      .modal-body {
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        background-image: url(../assets/winner-bg4.jpg);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .display-congrats {
+          color: white;
+          font-size: 70px;
+          font-weight: 500;
+          text-transform: uppercase;
+          text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+        }
+
+        .display-group {
+          background-color: #00000052;
+          padding-bottom: 20px;
+          width: 100%;
+        }
+
+        .display-name {
+          color: white;
+          font-size: 60px;
+          font-weight: 500;
+          text-transform: uppercase;
+          
+          
+          text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+          text-align: center;
+        }
+
+        .display-details {
+          text-align: center;
+          font-size: 25px;
+          color: white;
+          text-transform: uppercase;
+          font-weight: 500;
+          text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          line-height: normal;
+
+          .dd-user {
+            margin: 0 10px;
+          }
+        }
+
+        .display-prize {
+          color: white;
+          font-size: 25px;
+          font-weight: 500;
+          text-transform: uppercase;
+          text-shadow: 2px 2px 10px rgb(0, 0, 0);
+          padding-top: 10px;
+        }
+
+        .btn-claim {
+          margin-top: 20px;
+          background-color: transparent;
+          font-size: 20px;
+          border: solid 2px darkslateblue;
+          color: darkslateblue;
+          font-weight: 500;
+          border-radius: 3px;
+
+          &:hover {
+            background-color: darkslateblue;
+            cursor: pointer;
+            color: white;
+          }
+        }
+
+        .btn-redraw {
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          font-size: 14px;
+          font-weight: normal;
+          border: solid 0px darkslateblue;
+          background-color: white;
+          color: black;
+          border-radius: 3px;
+
+          &:hover {
+            background-color: crimson;
+            cursor: pointer;
+            color: white;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+.duplicate-modal {
+  .modal-dialog {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .modal-content {
+      width: 840px;
+
+      .modal-body {
+        height: 470px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .dup-cover {
+          width: 100%;
+          height: 100%;
+          background-image: url(../assets/duplicate3.jpg);
+          background-position: top;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border: solid 1px gainsboro;
+        }
+
+        .dup-cover-file {
+          width: 100%;
+          height: 100%;
+          background-image: url(../assets/no-excel.png);
+          background-position: top;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border: solid 1px gainsboro;
+        }
+
+        .dup-message {
+          padding: 15px 0;
+          width: 100%;
+          text-align: center;
+          line-height: 35px;
+
+          .dup-title {
+            font-size: 35px;
+            font-weight: 600;
+            color: darkslategray;
+          }
+
+          .dup-text {
+            font-size: 20px;
+          }
+
+          .btn-dup {
+            padding: 8px 50px;
+            border-radius: 3px;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
