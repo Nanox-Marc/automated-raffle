@@ -29,8 +29,13 @@ input.addEventListener('change', () => {
     const excelFileName = input.files.item(0).name;
     const employeeCount = (rows.length)-1;
     document.getElementById("displayFileName").innerHTML = "SOURCE FILE: " + excelFileName;
-    document.getElementById("input").classList.add("hide");
+    document.getElementById("uploadExcelFileHere").classList.add("hide");
     document.getElementById("employeeSize").innerHTML = employeeCount;
+
+    $(document).ready( function () {
+      $('#excelFormat').modal('hide');
+    } );
+
   })
 })
 

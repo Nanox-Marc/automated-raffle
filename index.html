@@ -42,7 +42,7 @@
     <main class="home">
       <div class="container raffle-container">
         <img src="assets/app-logo.png" class="img-fluid nanox-logo"/>
-        <input class="file-name" type="file" id="input" />
+        <button type="button" class="btn btn-light" id="uploadExcelFileHere" data-bs-toggle="modal" data-bs-target="#excelFormat"> UPLOAD EXCEL FILE </button>
         <p class="file-name" id="displayFileName"></p>
         <input class="form-control raffle-prize" type="text" id="raffleItem" placeholder="INPUT RAFFLE ITEM" value="">
         <button type="button" class="btn btn-random" id="random-button">RANDOM</button>
@@ -52,9 +52,9 @@
           VIEW WINNER LIST
         </button>
 
-        <a type="button" class="btn-excel-format" data-bs-toggle="modal" data-bs-target="#excelFormat">
+        <!-- <a type="button" class="btn-excel-format" data-bs-toggle="modal" data-bs-target="#excelFormat">
           Excel Format
-        </a>
+        </a> -->
 
       </div>
       
@@ -141,7 +141,7 @@
                     <div class="dup-cover-file"></div>
                     <div class="dup-message">
                       <p class="dup-title">NO SELECTED EXCEL FILE</p>
-                      <p class="dup-text">Please upload excel file using the "Choose File" button!</p>
+                      <p class="dup-text">Please upload excel file using the "UPLOAD EXCEL FILE" button!</p>
                       <button type="button" class="btn btn-secondary btn-dup" data-bs-dismiss="modal">CLOSE</button>
                     </div>
                 </div>
@@ -180,7 +180,13 @@
                     <div class="dup-message">
                       <p class="dup-title">EXCEL COLUMN FORMAT</p>
                       <p class="dup-text-format"><b>Please follow this column format on your Excel File.</b> This is to make sure that the employee details are properly plotted on the system. The first column should be Employee Count, followed by Employee ID, First Name, Middle Name, Last Name, Department and Division. <b>Anything can follow after the Division Column.</b></p>
-                      <button type="button" class="btn btn-secondary btn-dup" data-bs-dismiss="modal">UNDERSTOOD</button>
+                      <!-- <button type="button" class="btn btn-secondary btn-dup" data-bs-dismiss="modal">UNDERSTOOD</button> -->
+                      <input class="file-name hide" type="file" id="input" />
+                      <div class="upload-btn-group">
+                        <label for="input" class="upload-btn">PROCEED WITH UPLOAD</label>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCEL</button>
+                      </div>
+                      
                     </div>
                 </div>
               

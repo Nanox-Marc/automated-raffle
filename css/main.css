@@ -12014,6 +12014,28 @@ body {
   color: white;
 }
 
+.duplicate-modal .hide {
+  display: none;
+}
+.duplicate-modal .upload-btn-group {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+.duplicate-modal .upload-btn-group .upload-btn {
+  background-color: #168316;
+  color: white;
+  padding: 2px 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  border: solid 2px #168316;
+  margin-right: 10px;
+}
+.duplicate-modal .upload-btn-group .upload-btn:hover {
+  background-color: white;
+  color: #168316;
+  cursor: pointer;
+}
 .duplicate-modal .modal-dialog {
   width: 100%;
   max-width: 100%;
