@@ -44,13 +44,18 @@
         <img src="assets/app-logo.png" class="img-fluid nanox-logo"/>
         <input class="file-name" type="file" id="input" />
         <p class="file-name" id="displayFileName"></p>
-        <input class="form-control raffle-prize" type="text" id="raffleItem" placeholder="INPUT RAFFLE ITEM" value="automatic washing machine">
+        <input class="form-control raffle-prize" type="text" id="raffleItem" placeholder="INPUT RAFFLE ITEM" value="">
         <button type="button" class="btn btn-random" id="random-button">RANDOM</button>
         <!-- data-bs-toggle="modal" data-bs-target="#staticBackdrop" -->
         <p class="file-name total-label">Picking 1 Employee out of : <span id="employeeSize"></span></p>
         <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#winnerModalList">
           VIEW WINNER LIST
         </button>
+
+        <a type="button" class="btn-excel-format" data-bs-toggle="modal" data-bs-target="#excelFormat">
+          Excel Format
+        </a>
+
       </div>
       
     </main>
@@ -137,6 +142,44 @@
                     <div class="dup-message">
                       <p class="dup-title">NO SELECTED EXCEL FILE</p>
                       <p class="dup-text">Please upload excel file using the "Choose File" button!</p>
+                      <button type="button" class="btn btn-secondary btn-dup" data-bs-dismiss="modal">CLOSE</button>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+
+    <!-- No Input of Raffle Item Modal -->
+    <div class="modal fade duplicate-modal" id="noRaffleItem" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="noRaffleItemLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              
+                <div class="modal-body">
+                    <div class="dup-cover-prize"></div>
+                    <div class="dup-message">
+                      <p class="dup-title">WHERE'S THE PRIZE?</p>
+                      <p class="dup-text">Please input a raffle item before clicking the random button!</p>
+                      <button type="button" class="btn btn-secondary btn-dup" data-bs-dismiss="modal">CLOSE</button>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+
+    <!-- Excel Format Modal -->
+    <div class="modal fade duplicate-modal" id="excelFormat" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="excelFormatLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              
+                <div class="modal-body">
+                    <div class="dup-cover-format">
+                      <img src="assets/format.JPG" class="img-fluid nanox-logo"/>
+                    </div>
+                    <div class="dup-message">
+                      <p class="dup-title">EXCEL FORMAT</p>
+                      <p class="dup-text-format">Please follow the column format of the excel file. This is to make sure that the employee details are properly plotted on the system. The first column should be Employee Count, followed by Employee ID, First Name, Middle Name, Last Name, Department and Division. Anything can follow after the Division Column.</p>
                       <button type="button" class="btn btn-secondary btn-dup" data-bs-dismiss="modal">CLOSE</button>
                     </div>
                 </div>

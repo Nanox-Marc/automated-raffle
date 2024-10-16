@@ -41,62 +41,67 @@ document.getElementById('random-button').addEventListener('click', () => {
 
       // Total Count of Employee
       const employeeCount = (rows.length)-1;
-  
-      // List of current winners
+      const hasInputRaffle = document.getElementById("raffleItem").value;
+
+      if(hasInputRaffle != "") {
+          //random pick for the lucky winner. This is the X Axis.
+          let randomNumber;
+          if(generatedNumbers.size != employeeCount) {
+            do {
+                  // Generate a random number between 1 and 100
+                  randomNumber = Math.floor(Math.random() * employeeCount) + 1;
+              } while (generatedNumbers.has(randomNumber));
       
-  
-      //random pick for the lucky winner. This is the X Axis.
-      let randomNumber;
-      if(generatedNumbers.size != employeeCount) {
-        do {
-              // Generate a random number between 1 and 100
-              randomNumber = Math.floor(Math.random() * employeeCount) + 1;
-          } while (generatedNumbers.has(randomNumber));
-  
-          // Add the new number to the set
-          generatedNumbers.add(randomNumber);
-  
-          //setting the excel index. This is the Y Axis
-          const indexEmployeeId = 1;
-          const indexFirstName = 2;
-          const indexLastName = 3;
-          const indexDivision = 4;
-          const indexDepartment = 5;
-  
-          //getting the winner's details. 
-          const winnerEmployeeID = rows[randomNumber][indexEmployeeId];
-          const winnerFirstName = rows[randomNumber][indexFirstName];
-          const winnerLastName = rows[randomNumber][indexLastName];
-          const winnerFullName = winnerFirstName + " " + winnerLastName;
-          const winnerDivision = rows[randomNumber][indexDivision];
-          const winnerDepartment = rows[randomNumber][indexDepartment];
-          const WinnerPriceItem = document.getElementById("raffleItem").value;
-  
-  
-          if (!winnerList.includes(winnerEmployeeID)) {
-  
-            // Append the user to the winnerList if the user's ID doesn't exist on the list
-            winnerList.push(winnerEmployeeID);
-            console.log(winnerList);
-  
-            document.getElementById("dmWinner").innerHTML = winnerFullName;
-            document.getElementById("dmDepartment").innerHTML = winnerDepartment;
-            document.getElementById("dmIdNumber").innerHTML = winnerEmployeeID;
-            document.getElementById("dmPrize").innerHTML = WinnerPriceItem;
-  
-            $(document).ready( function () {
-              $('#staticBackdrop').modal('show');
-            } );
-            
+              // Add the new number to the set
+              generatedNumbers.add(randomNumber);
+      
+              //setting the excel index. This is the Y Axis
+              const indexEmployeeId = 1;
+              const indexFirstName = 2;
+              const indexLastName = 4;
+              const indexDivision = 6;
+              const indexDepartment = 5;
+      
+              //getting the winner's details. 
+              const winnerEmployeeID = rows[randomNumber][indexEmployeeId];
+              const winnerFirstName = rows[randomNumber][indexFirstName];
+              const winnerLastName = rows[randomNumber][indexLastName];
+              const winnerFullName = winnerFirstName + " " + winnerLastName;
+              const winnerDivision = rows[randomNumber][indexDivision];
+              const winnerDepartment = rows[randomNumber][indexDepartment];
+              const WinnerPriceItem = document.getElementById("raffleItem").value;
+      
+      
+              if (!winnerList.includes(winnerEmployeeID)) {
+      
+                // Append the user to the winnerList if the user's ID doesn't exist on the list
+                winnerList.push(winnerEmployeeID);
+                console.log(winnerList);
+      
+                document.getElementById("dmWinner").innerHTML = winnerFullName;
+                document.getElementById("dmDepartment").innerHTML = winnerDepartment;
+                document.getElementById("dmIdNumber").innerHTML = winnerEmployeeID;
+                document.getElementById("dmPrize").innerHTML = WinnerPriceItem;
+      
+                $(document).ready( function () {
+                  $('#staticBackdrop').modal('show');
+                } );
+                
+              } else {
+                // Nothing will happend. If the picked employee is already on the winner list nothing will be append on the winnerList Array. 
+              }
+      
           } else {
-            // Nothing will happend. If the picked employee is already on the winner list nothing will be append on the winnerList Array. 
+            $(document).ready( function () {
+              $('#duplicateModal').modal('show');
+            } );
           }
-  
       } else {
         $(document).ready( function () {
-          $('#duplicateModal').modal('show');
+          $('#noRaffleItem').modal('show');
         } );
-      }  
+      }
+       
   
     })
 

@@ -11899,6 +11899,16 @@ body {
   text-transform: uppercase;
   font-size: 25px;
 }
+.home .raffle-container .btn-excel-format {
+  border: none;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+}
 
 .modal-winners .modal-dialog {
   width: 100%;
@@ -11932,7 +11942,7 @@ body {
 }
 .modal-random .modal-dialog .modal-content .modal-body .display-congrats {
   color: white;
-  font-size: 70px;
+  font-size: 80px;
   font-weight: 500;
   text-transform: uppercase;
   text-shadow: 2px 2px 10px rgb(0, 0, 0);
@@ -12038,6 +12048,28 @@ body {
   background-size: cover;
   border: solid 1px gainsboro;
 }
+.duplicate-modal .modal-dialog .modal-content .modal-body .dup-cover-prize {
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/no-prize.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: solid 1px gainsboro;
+}
+.duplicate-modal .modal-dialog .modal-content .modal-body .dup-cover-format {
+  width: 100%;
+  height: 100%;
+  background-color: #1a1a1a;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: solid 1px gainsboro;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
 .duplicate-modal .modal-dialog .modal-content .modal-body .dup-message {
   padding: 15px 0;
   width: 100%;
@@ -12051,6 +12083,12 @@ body {
 }
 .duplicate-modal .modal-dialog .modal-content .modal-body .dup-message .dup-text {
   font-size: 20px;
+}
+.duplicate-modal .modal-dialog .modal-content .modal-body .dup-message .dup-text-format {
+  font-size: 16px;
+  line-height: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .duplicate-modal .modal-dialog .modal-content .modal-body .dup-message .btn-dup {
   padding: 8px 50px;
