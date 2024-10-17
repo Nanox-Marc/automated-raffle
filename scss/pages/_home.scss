@@ -295,8 +295,8 @@ body {
         .dup-cover-drum {
           width: 100%;
           height: 100%;
-          background-image: url(../assets/winner-bg4.jpg);
-          background-position: bottom;
+          background-image: url(../assets/drum3.gif);
+          background-position: center;
           background-repeat: no-repeat;
           background-size: cover;
           border: solid 1px gainsboro;
@@ -307,6 +307,16 @@ body {
 
           .lambiolo-icon {
             height: 100%;
+          }
+
+          .dup-winner-drum-title {
+            font-size: 90px;
+            color: white;
+            font-weight: 500;
+            background-color: #0000004f;
+            width: 90%;
+            text-align: center;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
           }
         }
 
@@ -365,7 +375,7 @@ body {
       width: 1000px;
 
       .drum-roll-body {
-        height: 80vh;
+        height: 500px;
       }
     }
   }
