@@ -66,6 +66,30 @@ body {
       color: white;
       font-size: 15px;
     }
+
+    .timer-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      color: white;
+
+      .timer-text {
+        margin-right: 10px;
+        font-weight: 500;
+        font-size: 16px;
+      }
+
+      .drum-btn {
+        font-size: 12px;
+        width: 50px;
+        font-weight: 500;
+        border: solid 2px white;
+        padding: 3px 0px;
+      }
+    }
   }
 }
 
@@ -268,6 +292,24 @@ body {
           border: solid 1px gainsboro;
         }
 
+        .dup-cover-drum {
+          width: 100%;
+          height: 100%;
+          background-image: url(../assets/winner-bg4.jpg);
+          background-position: bottom;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border: solid 1px gainsboro;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .lambiolo-icon {
+            height: 100%;
+          }
+        }
+
         .dup-cover-format {
           width: 100%;
           height: 100%;
@@ -295,6 +337,10 @@ body {
             color: darkslategray;
           }
 
+          .dup-winner-drum-title {
+            padding: 10px 0px;
+          }
+
           .dup-text {
             font-size: 20px;
           }
@@ -312,6 +358,14 @@ body {
             margin-top: 10px;
           }
         }
+      }
+    }
+
+    .drum-roll-content {
+      width: 1000px;
+
+      .drum-roll-body {
+        height: 80vh;
       }
     }
   }

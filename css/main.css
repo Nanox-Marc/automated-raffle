@@ -11909,6 +11909,27 @@ body {
   color: white;
   font-size: 15px;
 }
+.home .raffle-container .timer-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+}
+.home .raffle-container .timer-group .timer-text {
+  margin-right: 10px;
+  font-weight: 500;
+  font-size: 16px;
+}
+.home .raffle-container .timer-group .drum-btn {
+  font-size: 12px;
+  width: 50px;
+  font-weight: 500;
+  border: solid 2px white;
+  padding: 3px 0px;
+}
 
 .modal-winners .modal-dialog {
   width: 100%;
@@ -12079,6 +12100,21 @@ body {
   background-size: cover;
   border: solid 1px gainsboro;
 }
+.duplicate-modal .modal-dialog .modal-content .modal-body .dup-cover-drum {
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/winner-bg4.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: solid 1px gainsboro;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.duplicate-modal .modal-dialog .modal-content .modal-body .dup-cover-drum .lambiolo-icon {
+  height: 100%;
+}
 .duplicate-modal .modal-dialog .modal-content .modal-body .dup-cover-format {
   width: 100%;
   height: 100%;
@@ -12103,6 +12139,9 @@ body {
   font-weight: 600;
   color: darkslategray;
 }
+.duplicate-modal .modal-dialog .modal-content .modal-body .dup-message .dup-winner-drum-title {
+  padding: 10px 0px;
+}
 .duplicate-modal .modal-dialog .modal-content .modal-body .dup-message .dup-text {
   font-size: 20px;
 }
@@ -12116,6 +12155,12 @@ body {
   padding: 8px 50px;
   border-radius: 3px;
   margin-top: 10px;
+}
+.duplicate-modal .modal-dialog .drum-roll-content {
+  width: 1000px;
+}
+.duplicate-modal .modal-dialog .drum-roll-content .drum-roll-body {
+  height: 80vh;
 }
 
 /*# sourceMappingURL=main.css.map */

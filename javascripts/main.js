@@ -2,6 +2,31 @@ var input = document.getElementById('input')
 const winnerList = [];
 const generatedNumbers = new Set();
 var clickCount = 0;
+let drumRollActive = false;
+let developerMode = false;
+let drumBtnLabel = "FALSE";
+var drumRollWinner = document.getElementById("winnerAudio"); 
+
+// Setting Timer On or Off (Drum Rolls)
+$("#drumRollBtn").click(function(){
+  drumRollActive = !drumRollActive;
+
+  if(drumRollActive == true) {
+    drumBtnLabel = "ON"
+    $('#drumRollBtn').removeClass('btn-outline-light');
+    $('#drumRollBtn').addClass('btn-light');
+  } else {
+    drumBtnLabel = "OFF"
+    $('#drumRollBtn').removeClass('btn-light');
+    $('#drumRollBtn').addClass('btn-outline-light');
+  }
+  document.getElementById("drumRollBtn").innerHTML = drumBtnLabel;
+});
+
+$("#devModeBtn").click(function(){
+  developerMode = !developerMode;
+});
+
 
 $(document).ready( function () {
 
@@ -57,6 +82,11 @@ document.getElementById('random-button').addEventListener('click', () => {
                   randomNumber = Math.floor(Math.random() * employeeCount) + 1;
               } while (generatedNumbers.has(randomNumber));
       
+              if(developerMode){
+                alert("Random Generated Number: "+randomNumber);
+                console.log("Random Generated Number: "+randomNumber);
+              }
+              
               // Add the new number to the set
               generatedNumbers.add(randomNumber);
       
@@ -88,9 +118,26 @@ document.getElementById('random-button').addEventListener('click', () => {
                 document.getElementById("dmIdNumber").innerHTML = winnerEmployeeID;
                 document.getElementById("dmPrize").innerHTML = WinnerPriceItem;
       
-                $(document).ready( function () {
-                  $('#staticBackdrop').modal('show');
-                } );
+                if(drumRollActive) {
+                  drumRollWinner.play();
+
+                  $(document).ready( function () {
+                    $('#drumRollModal').modal('show');
+                  } );
+
+                  setTimeout(()=> {
+                    $(document).ready( function () {
+                      $('#drumRollModal').modal('hide');
+                      $('#staticBackdrop').modal('show');
+                    } );
+                  } ,5200);
+
+                } else {
+                  $(document).ready( function () {
+                    $('#staticBackdrop').modal('show');
+                  } );
+                }
+                
                 
               } else {
                 // Nothing will happend. If the picked employee is already on the winner list nothing will be append on the winnerList Array. 

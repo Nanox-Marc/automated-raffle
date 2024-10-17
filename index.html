@@ -52,20 +52,25 @@
           VIEW WINNER LIST
         </button>
 
-        <!-- <a type="button" class="btn-excel-format" data-bs-toggle="modal" data-bs-target="#excelFormat">
-          Excel Format
-        </a> -->
+        <div class="timer-group">
+          <p class="timer-text">DRUM ROLL</p>
+          <button type="button" class="btn btn-outline-light drum-btn" id="drumRollBtn"> OFF </button>
+        </div>
 
       </div>
       
     </main>
+
+    <audio id="winnerAudio">
+      <source src="assets/win.mp3" type="audio/mpeg">
+    </audio>
 
     <!-- Winner List Modal -->
     <div class="modal fade modal-winners" id="winnerModalList" tabindex="-1" aria-labelledby="winnerModalListLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="winnerModalListLabel">AUTOMATED RAFFLE SYSTEM: WINNER LIST</h1>
+            <h1 class="modal-title fs-5" id="winnerModalListLabel">AUT<span id="devModeBtn">O</span>MATED RAFFLE SYSTEM: WINNER LIST</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -186,6 +191,26 @@
                         <label for="input" class="upload-btn">PROCEED WITH UPLOAD</label>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCEL</button>
                       </div>
+                      
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+
+    <!-- Drum Roll Modal -->
+    <div class="modal fade duplicate-modal" id="drumRollModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="drumRollModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content drum-roll-content">
+              
+                <div class="modal-body drum-roll-body">
+                    <div class="dup-cover-drum">
+                      <img src="assets/raffle.gif" class="img-fluid lambiolo-icon"/>
+                    </div>
+                    <div class="dup-message">
+                      
+                      <p class="dup-title dup-winner-drum-title">THE WINNER IS . . .</p>
                       
                     </div>
                 </div>
