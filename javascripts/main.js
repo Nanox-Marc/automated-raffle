@@ -4,7 +4,8 @@ const generatedNumbers = new Set();
 var clickCount = 0;
 let drumRollActive = false;
 let developerMode = false;
-let drumBtnLabel = "FALSE";
+let drumBtnLabel = "";
+let devBtnLabel = "";
 var drumRollWinner = document.getElementById("winnerAudio"); 
 
 // Setting Timer On or Off (Drum Rolls)
@@ -13,18 +14,29 @@ $("#drumRollBtn").click(function(){
 
   if(drumRollActive == true) {
     drumBtnLabel = "ON"
-    $('#drumRollBtn').removeClass('btn-outline-light');
-    $('#drumRollBtn').addClass('btn-light');
+    $('#drumRollBtn').removeClass('btn-outline-dark');
+    $('#drumRollBtn').addClass('btn-dark');
   } else {
     drumBtnLabel = "OFF"
-    $('#drumRollBtn').removeClass('btn-light');
-    $('#drumRollBtn').addClass('btn-outline-light');
+    $('#drumRollBtn').removeClass('btn-dark');
+    $('#drumRollBtn').addClass('btn-outline-dark');
   }
   document.getElementById("drumRollBtn").innerHTML = drumBtnLabel;
 });
 
 $("#devModeBtn").click(function(){
   developerMode = !developerMode;
+
+  if(developerMode == true) {
+    devBtnLabel = "ON"
+    $('#devModeBtn').removeClass('btn-outline-dark');
+    $('#devModeBtn').addClass('btn-dark');
+  } else {
+    devBtnLabel = "OFF"
+    $('#devModeBtn').removeClass('btn-dark');
+    $('#devModeBtn').addClass('btn-outline-dark');
+  }
+  document.getElementById("devModeBtn").innerHTML = devBtnLabel;
 });
 
 
@@ -83,7 +95,7 @@ document.getElementById('random-button').addEventListener('click', () => {
               } while (generatedNumbers.has(randomNumber));
       
               if(developerMode){
-                alert("Random Generated Number: "+randomNumber);
+                alert("DEV MODE IS ON  \nRandom Generated Number: "+randomNumber);
                 console.log("Random Generated Number: "+randomNumber);
               }
               

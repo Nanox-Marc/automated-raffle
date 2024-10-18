@@ -11909,25 +11909,32 @@ body {
   color: white;
   font-size: 15px;
 }
-.home .raffle-container .timer-group {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.home .raffle-container .settings-group {
   position: absolute;
   bottom: 15px;
   left: 15px;
-  color: white;
+  color: black;
 }
-.home .raffle-container .timer-group .timer-text {
+.home .raffle-container .settings-group .dropdown-menu {
+  width: 210px;
+  padding: 0;
+}
+.home .raffle-container .settings-group .timer-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 10px;
+}
+.home .raffle-container .settings-group .timer-group .timer-text {
   margin-right: 10px;
   font-weight: 500;
   font-size: 16px;
 }
-.home .raffle-container .timer-group .drum-btn {
+.home .raffle-container .settings-group .timer-group .drum-btn {
   font-size: 12px;
-  width: 50px;
+  width: 45px;
   font-weight: 500;
-  border: solid 2px white;
+  border: solid 2px #4d5154;
   padding: 3px 0px;
 }
 
@@ -12135,7 +12142,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px;
 }
 .duplicate-modal .modal-dialog .modal-content .modal-body .dup-message {
   padding: 15px 0;
@@ -12170,6 +12176,59 @@ body {
 }
 .duplicate-modal .modal-dialog .drum-roll-content .drum-roll-body {
   height: 500px;
+}
+
+.instruction-modal .modal-dialog {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.instruction-modal .modal-dialog .modal-content {
+  width: 840px;
+}
+.instruction-modal .modal-dialog .modal-content .modal-body {
+  width: 100%;
+  background-color: white;
+}
+.instruction-modal .modal-dialog .modal-content .modal-body .instruction-carousel {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.instruction-modal .modal-dialog .modal-content .modal-body .instruction-container {
+  height: 420px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 30px;
+  flex-direction: column;
+}
+.instruction-modal .modal-dialog .modal-content .modal-body .instruction-container .instruction-title {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.instruction-modal .modal-dialog .modal-content .modal-body .instruction-container .instruction-text {
+  font-size: 16px;
+  text-align: center;
+}
+.instruction-modal .modal-dialog .modal-content .modal-body .instruction-container .btn-close-modal {
+  margin-top: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.instruction-modal .modal-dialog .modal-content .modal-body .instruction-one {
+  background-image: url(../assets/instruction1.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.instruction-modal .modal-dialog .modal-content .modal-body .carousel-instruction-btn {
+  width: 50px;
+}
+.instruction-modal .modal-dialog .modal-content .modal-body .carousel-indicators {
+  position: relative;
 }
 
 /*# sourceMappingURL=main.css.map */

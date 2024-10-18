@@ -67,27 +67,60 @@ body {
       font-size: 15px;
     }
 
-    .timer-group {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    // .timer-group {
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+    //   position: absolute;
+    //   bottom: 15px;
+    //   left: 15px;
+    //   color: white;
+
+    //   .timer-text {
+    //     margin-right: 10px;
+    //     font-weight: 500;
+    //     font-size: 16px;
+    //   }
+
+    //   .drum-btn {
+    //     font-size: 12px;
+    //     width: 50px;
+    //     font-weight: 500;
+    //     border: solid 2px white;
+    //     padding: 3px 0px;
+    //   }
+    // }
+
+    .settings-group {
       position: absolute;
       bottom: 15px;
       left: 15px;
-      color: white;
+      color: black;
 
-      .timer-text {
-        margin-right: 10px;
-        font-weight: 500;
-        font-size: 16px;
+      .dropdown-menu {
+        width: 210px;
+        padding: 0;
       }
 
-      .drum-btn {
-        font-size: 12px;
-        width: 50px;
-        font-weight: 500;
-        border: solid 2px white;
-        padding: 3px 0px;
+      .timer-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 10px;
+  
+        .timer-text {
+          margin-right: 10px;
+          font-weight: 500;
+          font-size: 16px;
+        }
+  
+        .drum-btn {
+          font-size: 12px;
+          width: 45px;
+          font-weight: 500;
+          border: solid 2px #4d5154;
+          padding: 3px 0px;
+        }
       }
     }
   }
@@ -332,7 +365,6 @@ body {
           display: flex;
           justify-content: center;
           align-items: center;
-          padding: 15px;
         }
 
         .dup-message {
@@ -376,6 +408,76 @@ body {
 
       .drum-roll-body {
         height: 500px;
+      }
+    }
+  }
+}
+
+.instruction-modal {
+  .modal-dialog {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .modal-content {
+      width: 840px;
+
+      .modal-body {
+        width: 100%;
+        // height: 500px;
+        // background-color: #1a1a1a;
+        // border: solid 1px white;
+        // color: white;
+        background-color: white;
+
+        .instruction-carousel {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+
+        .instruction-container {
+          height: 420px;
+          width: 100%;
+
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          padding-bottom: 30px;
+          flex-direction: column;
+
+          .instruction-title {
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: 500;
+          }
+
+          .instruction-text {
+            font-size: 16px;
+            text-align: center;
+          }
+
+          .btn-close-modal {
+            margin-top: 10px;
+            padding-left: 40px;
+            padding-right: 40px;
+          }
+        }
+
+        .instruction-one {
+          background-image: url(../assets/instruction1.jpg);
+          background-position: bottom;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        .carousel-instruction-btn {
+          width: 50px;
+        }
+
+        .carousel-indicators {
+          position: relative;
+        }
       }
     }
   }
