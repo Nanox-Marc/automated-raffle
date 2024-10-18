@@ -12189,7 +12189,9 @@ body {
 }
 .instruction-modal .modal-dialog .modal-content .modal-body {
   width: 100%;
-  background-color: white;
+  border: solid 1px white;
+  color: white;
+  background-color: #232037;
 }
 .instruction-modal .modal-dialog .modal-content .modal-body .instruction-carousel {
   display: flex;
@@ -12199,10 +12201,40 @@ body {
   height: 420px;
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding-bottom: 30px;
   flex-direction: column;
+}
+.instruction-modal .modal-dialog .modal-content .modal-body .instruction-container .carousel-part {
+  text-align: center;
+}
+.instruction-modal .modal-dialog .modal-content .modal-body .instruction-container .carousel-part-image {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.instruction-modal .modal-dialog .modal-content .modal-body .instruction-container .carousel-part-image .carousel-image {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.instruction-modal .modal-dialog .modal-content .modal-body .instruction-container .carousel-part-image .announcement-image {
+  width: 60%;
+}
+.instruction-modal .modal-dialog .modal-content .modal-body .instruction-container .carousel-part-dev {
+  height: 250px;
+  padding: 0;
+  border: solid 1px white;
+}
+.instruction-modal .modal-dialog .modal-content .modal-body .instruction-container .carousel-part-dev .dev-gif {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .instruction-modal .modal-dialog .modal-content .modal-body .instruction-container .instruction-title {
   font-size: 20px;
@@ -12217,12 +12249,6 @@ body {
   margin-top: 10px;
   padding-left: 40px;
   padding-right: 40px;
-}
-.instruction-modal .modal-dialog .modal-content .modal-body .instruction-one {
-  background-image: url(../assets/instruction1.jpg);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 .instruction-modal .modal-dialog .modal-content .modal-body .carousel-instruction-btn {
   width: 50px;

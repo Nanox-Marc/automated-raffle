@@ -76,11 +76,11 @@
               </div>
 
               <div class="timer-group">
-                <p class="timer-text">HOW IT WORKS</p>
+                <p class="timer-text">INSTRUCTION</p>
                 <button type="button" class="btn btn-outline-dark drum-btn" data-bs-toggle="modal" data-bs-target="#instructionModal">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
-                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
-                    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-text" viewBox="0 0 16 16">
+                    <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
+                    <path d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8m0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5"/>
                   </svg>
                 </button>
               </div>
@@ -251,7 +251,7 @@
           <div class="modal-content">
               <div class="modal-body">
                   <div class="dup-cover-file">
-                      <div id="carouselExampleIndicators" class="carousel carousel-dark slide instruction-carousel">
+                      <div id="carouselExampleIndicators" class="carousel slide instruction-carousel">
                           <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -262,41 +262,71 @@
                           </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                              <div class="instruction-container instruction-one">
-                                <p class="instruction-title">Upload the Excel File</p>
-                                <p class="instruction-text">Ensure to follow the correct format for the rows and column. The first row should always be the Table Header. Header titles for each column are Number [Column A], Employee ID [Column B], First Name [Column C], Middle Name [Column D], Last Name [Column E], Department [Column F], and Division [Column G].</p>
+                              <div class="instruction-container">
+                                <div class="carousel-part carousel-part-image">
+                                  <img src="assets/format1.JPG" class="img-fluid carousel-image"/>
+                                </div>
+                                <div class="carousel-part">
+                                  <p class="instruction-title">Upload the Excel File</p>
+                                  <p class="instruction-text">Ensure to follow the correct format for the rows and column. The first row should always be the Table Header. Header titles for each column are Number [Column A], Employee ID [Column B], First Name [Column C], Middle Name [Column D], Last Name [Column E], Department [Column F], and Division [Column G].</p>
+                                </div>
                               </div>
                             </div>
                             <div class="carousel-item">
                               <div class="instruction-container">
-                                <p class="instruction-title">Input the raffle item</p>
-                                <p class="instruction-text">Type the raffle item in the provided text box to record the item being raffled. You can change the inputted raffle item in the text box whenever there’s a new item to be raffled.</p>
+                                <div class="carousel-part carousel-part-image">
+                                  <img src="assets/raffle-item.gif" class="img-fluid carousel-image"/>
+                                </div>
+                                <div class="carousel-part">
+                                  <p class="instruction-title">Input the raffle item</p>
+                                  <p class="instruction-text">Type the raffle item in the provided text box to record the item being raffled. You can change the inputted raffle item in the text box whenever there’s a new item to be raffled.</p>
+                                </div>
                               </div>
                             </div>
                             <div class="carousel-item">
                               <div class="instruction-container">
-                                <p class="instruction-title">Generate a Random Winner</p>
-                                <p class="instruction-text">After clicking the “Generate Winner” button, the automated raffle system will generate a random number. The system will then match this random number to the corresponding row number in the Excel file to select the winner.</p>
+                                <div class="carousel-part carousel-part-image">
+                                  <img src="assets/random-number.gif" class="img-fluid carousel-image"/>
+                                </div>
+                                <div class="carousel-part">
+                                  <p class="instruction-title">Generate a Random Winner</p>
+                                  <p class="instruction-text">After clicking the “Generate Winner” button, the automated raffle system will generate a random number. The system will then match this random number to the corresponding row number in the Excel file to select the winner.</p>
+                                </div>
                               </div>
                             </div>
                             <div class="carousel-item">
                               <div class="instruction-container">
-                                <p class="instruction-title">Announcement of the Winner</p>
-                                <p class="instruction-text">The system will display an alert with the details of the randomly selected winner and the raffle item. You can click the "Claim Prize" button if the winner is present to claim their prize or click the "Redraw" button if the winner is not present, and the system will go back to the main screen for you to generate a new random winner.</p>
+                                <div class="carousel-part carousel-part-image">
+                                  <img src="assets/raffle-alert.gif" class="img-fluid carousel-image announcement-image"/>
+                                </div>
+                                <div class="carousel-part">
+                                  <p class="instruction-title">Announcement of the Winner</p>
+                                  <p class="instruction-text">The system will display an alert with the details of the randomly selected winner and the raffle item. You can click the "Claim Prize" button if the winner is present to claim their prize or click the "Redraw" button if the winner is not present, and the system will go back to the main screen for you to generate a new random winner.</p>
+                                </div>
                               </div>
                             </div>
                             <div class="carousel-item">
                               <div class="instruction-container">
-                                <p class="instruction-title">View and Download Winners List</p>
-                                <p class="instruction-text">Click the “View Winners” button to open a popup window displaying all the recorded winners who have claimed their prize. Inside the popup window, there will be an option to download the data, which will produce an Excel file with the list of winners.</p>
+                                <div class="carousel-part carousel-part-image">
+                                  <img src="assets/winner-list.gif" class="img-fluid carousel-image announcement-image"/>
+                                </div>
+                                <div class="carousel-part">
+                                  <p class="instruction-title">View and Download Winners List</p>
+                                  <p class="instruction-text">Click the “View Winners” button to open a popup window displaying all the recorded winners who have claimed their prize. Inside the popup window, there will be an option to download the data, which will produce an Excel file with the list of winners.</p>
+                                </div>
                               </div>
                             </div>
                             <div class="carousel-item">
                               <div class="instruction-container">
-                                <p class="instruction-title">Contact for Further Questions</p>
-                                <p class="instruction-text">If you have any questions or need further assistance, please contact the developer of the system:</p>
-                                <p class="instruction-text">Email [nxp.is-team.zz@j-display.com] [richardmarck.barreda.wa@j-display.com] Telephone [1171 or 1170]</p>
-                                <button type="button" class="btn btn-secondary btn-close-modal" data-bs-dismiss="modal">CLOSE</button>
+                                <div class="carousel-part carousel-part-image carousel-part-dev">
+                                  <img src="assets/programming1.gif" class="carousel-image dev-gif"/>
+                                </div>
+                                <div class="carousel-part">
+                                  <p class="instruction-title">Contact for Further Questions</p>
+                                  <p class="instruction-text">If you have any questions or need further assistance, please contact the developer of the system:</p>
+                                  <p class="instruction-text">Email [nxp.is-team.zz@j-display.com] [richardmarck.barreda.wa@j-display.com] Telephone [1171 or 1170]</p>
+                                  <button type="button" class="btn btn-light btn-close-modal" data-bs-dismiss="modal">CLOSE</button>
+                                </div>
                               </div>
                             </div>
                         </div>
