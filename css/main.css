@@ -12331,6 +12331,7 @@ body {
   padding: 0px 10px;
   font-weight: 500;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 .faq-modal .modal-dialog .modal-content .modal-body .dup-cover-file .faq-group .faq-answer {
   margin-left: 20px;
