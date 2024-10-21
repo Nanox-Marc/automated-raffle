@@ -76,11 +76,20 @@
               </div>
 
               <div class="timer-group">
-                <p class="timer-text">INSTRUCTION</p>
+                <p class="timer-text">INSTRUCTIONS</p>
                 <button type="button" class="btn btn-outline-dark drum-btn" data-bs-toggle="modal" data-bs-target="#instructionModal">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-text" viewBox="0 0 16 16">
                     <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
                     <path d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8m0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5"/>
+                  </svg>
+                </button>
+              </div>
+
+              <div class="timer-group">
+                <p class="timer-text">FAQ</p>
+                <button type="button" class="btn btn-outline-dark drum-btn" data-bs-toggle="modal" data-bs-target="#faAndqModal">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-question-fill" viewBox="0 0 16 16">
+                    <path d="M5.933.87a2.89 2.89 0 0 1 4.134 0l.622.638.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01zM7.002 11a1 1 0 1 0 2 0 1 1 0 0 0-2 0m1.602-2.027c.04-.534.198-.815.846-1.26.674-.475 1.05-1.09 1.05-1.986 0-1.325-.92-2.227-2.262-2.227-1.02 0-1.792.492-2.1 1.29A1.7 1.7 0 0 0 6 5.48c0 .393.203.64.545.64.272 0 .455-.147.564-.51.158-.592.525-.915 1.074-.915.61 0 1.03.446 1.03 1.084 0 .563-.208.885-.822 1.325-.619.433-.926.914-.926 1.64v.111c0 .428.208.745.585.745.336 0 .504-.24.554-.627"/>
                   </svg>
                 </button>
               </div>
@@ -245,7 +254,7 @@
         </div>
     </div>
 
-    <!-- No File Modal -->
+    <!-- How It Works -->
     <div class="modal fade instruction-modal" id="instructionModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="instructionModalLabel" data-bs-wrap="false" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
@@ -267,7 +276,11 @@
                                   <img src="assets/format1.JPG" class="img-fluid carousel-image"/>
                                 </div>
                                 <div class="carousel-part">
-                                  <p class="instruction-title">Upload the Excel File</p>
+                                  <p class="instruction-title">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-1-square-fill" viewBox="0 0 16 16">
+                                      <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm7.283 4.002V12H7.971V5.338h-.065L6.072 6.656V5.385l1.899-1.383z"/>
+                                    </svg>
+                                    Upload the Excel File</p>
                                   <p class="instruction-text">Ensure to follow the correct format for the rows and column. The first row should always be the Table Header. Header titles for each column are Number [Column A], Employee ID [Column B], First Name [Column C], Middle Name [Column D], Last Name [Column E], Department [Column F], and Division [Column G].</p>
                                 </div>
                               </div>
@@ -278,7 +291,11 @@
                                   <img src="assets/raffle-item.gif" class="img-fluid carousel-image"/>
                                 </div>
                                 <div class="carousel-part">
-                                  <p class="instruction-title">Input the raffle item</p>
+                                  <p class="instruction-title">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-2-square-fill" viewBox="0 0 16 16">
+                                      <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm4.646 6.24v.07H5.375v-.064c0-1.213.879-2.402 2.637-2.402 1.582 0 2.613.949 2.613 2.215 0 1.002-.6 1.667-1.287 2.43l-.096.107-1.974 2.22v.077h3.498V12H5.422v-.832l2.97-3.293c.434-.475.903-1.008.903-1.705 0-.744-.557-1.236-1.313-1.236-.843 0-1.336.615-1.336 1.306"/>
+                                    </svg>
+                                    Input the raffle item</p>
                                   <p class="instruction-text">Type the raffle item in the provided text box to record the item being raffled. You can change the inputted raffle item in the text box whenever there’s a new item to be raffled.</p>
                                 </div>
                               </div>
@@ -289,7 +306,11 @@
                                   <img src="assets/random-number.gif" class="img-fluid carousel-image"/>
                                 </div>
                                 <div class="carousel-part">
-                                  <p class="instruction-title">Generate a Random Winner</p>
+                                  <p class="instruction-title">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-3-square-fill" viewBox="0 0 16 16">
+                                      <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm5.918 8.414h-.879V7.342h.838c.78 0 1.348-.522 1.342-1.237 0-.709-.563-1.195-1.348-1.195-.79 0-1.312.498-1.348 1.055H5.275c.036-1.137.95-2.115 2.625-2.121 1.594-.012 2.608.885 2.637 2.062.023 1.137-.885 1.776-1.482 1.875v.07c.703.07 1.71.64 1.734 1.917.024 1.459-1.277 2.396-2.93 2.396-1.705 0-2.707-.967-2.754-2.144H6.33c.059.597.68 1.06 1.541 1.066.973.006 1.6-.563 1.588-1.354-.006-.779-.621-1.318-1.541-1.318"/>
+                                    </svg>
+                                    Generate a Random Winner</p>
                                   <p class="instruction-text">After clicking the “Generate Winner” button, the automated raffle system will generate a random number. The system will then match this random number to the corresponding row number in the Excel file to select the winner.</p>
                                 </div>
                               </div>
@@ -300,7 +321,12 @@
                                   <img src="assets/raffle-alert.gif" class="img-fluid carousel-image announcement-image"/>
                                 </div>
                                 <div class="carousel-part">
-                                  <p class="instruction-title">Announcement of the Winner</p>
+                                  <p class="instruction-title">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-4-square-fill" viewBox="0 0 16 16">
+                                      <path d="M6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218"/>
+                                      <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm5.519 5.057q.33-.527.657-1.055h1.933v5.332h1.008v1.107H10.11V12H8.85v-1.559H4.978V9.322c.77-1.427 1.656-2.847 2.542-4.265Z"/>
+                                    </svg>
+                                    Announcement of the Winner</p>
                                   <p class="instruction-text">The system will display an alert with the details of the randomly selected winner and the raffle item. You can click the "Claim Prize" button if the winner is present to claim their prize or click the "Redraw" button if the winner is not present, and the system will go back to the main screen for you to generate a new random winner.</p>
                                 </div>
                               </div>
@@ -311,7 +337,11 @@
                                   <img src="assets/winner-list.gif" class="img-fluid carousel-image announcement-image"/>
                                 </div>
                                 <div class="carousel-part">
-                                  <p class="instruction-title">View and Download Winners List</p>
+                                  <p class="instruction-title">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-5-square-fill" viewBox="0 0 16 16">
+                                      <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm5.994 12.158c-1.57 0-2.654-.902-2.719-2.115h1.237c.14.72.832 1.031 1.529 1.031.791 0 1.57-.597 1.57-1.681 0-.967-.732-1.57-1.582-1.57-.767 0-1.242.45-1.435.808H5.445L5.791 4h4.705v1.103H6.875l-.193 2.343h.064c.17-.258.715-.68 1.611-.68 1.383 0 2.561.944 2.561 2.585 0 1.687-1.184 2.806-2.924 2.806Z"/>
+                                    </svg>
+                                    View and Download Winners List</p>
                                   <p class="instruction-text">Click the “View Winners” button to open a popup window displaying all the recorded winners who have claimed their prize. Inside the popup window, there will be an option to download the data, which will produce an Excel file with the list of winners.</p>
                                 </div>
                               </div>
@@ -322,7 +352,12 @@
                                   <img src="assets/programming1.gif" class="carousel-image dev-gif"/>
                                 </div>
                                 <div class="carousel-part">
-                                  <p class="instruction-title">Contact for Further Questions</p>
+                                  <p class="instruction-title">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-6-square-fill" viewBox="0 0 16 16">
+                                      <path d="M8.111 7.863c-.92 0-1.564.65-1.564 1.576 0 1.032.703 1.635 1.558 1.635.868 0 1.553-.533 1.553-1.629 0-1.06-.744-1.582-1.547-1.582"/>
+                                      <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.21 3.855c1.612 0 2.515.99 2.573 1.899H9.494c-.1-.358-.51-.815-1.312-.815-1.078 0-1.817 1.09-1.805 3.036h.082c.229-.545.855-1.155 1.98-1.155 1.254 0 2.508.88 2.508 2.555 0 1.77-1.218 2.783-2.847 2.783-.932 0-1.84-.328-2.409-1.254-.369-.603-.597-1.459-.597-2.642 0-3.012 1.248-4.407 3.117-4.407Z"/>
+                                    </svg>
+                                    Contact for Further Questions</p>
                                   <p class="instruction-text">If you have any questions or need further assistance, please contact the developer of the system:</p>
                                   <p class="instruction-text">Email [nxp.is-team.zz@j-display.com] [richardmarck.barreda.wa@j-display.com] Telephone [1171 or 1170]</p>
                                   <button type="button" class="btn btn-light btn-close-modal" data-bs-dismiss="modal">CLOSE</button>
@@ -343,7 +378,94 @@
               </div>
           </div>
       </div>
-  </div>
+    </div>
+
+    <!-- Commonly asked questions -->
+    <div class="modal fade faq-modal" id="faAndqModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="faAndqModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              
+                <div class="modal-body">
+                    <div class="dup-cover-file">
+                      <div class="faq-group">
+                        <p class="faq-question">Question 1: What is this application for?</p>
+                        <p class="faq-answer">Answer: The automated raffle system is a digital platform that allows users to enter and manage raffles online. It automates the process of collecting entries, drawing winners, and notifying the participants real time.</p>
+                      </div>
+                      <div class="faq-group">
+                        <p class="faq-question">Question 2: How are winners selected?</p>
+                        <p class="faq-answer">Answer: Winners are selected randomly using a secure algorithm to ensure fairness. The system automatically draws winners from the pool of entries.</p>
+                      </div>
+                      <div class="faq-group">
+                        <p class="faq-question">Question 3: How does the system ensure randomness in winner selection?</p>
+                        <p class="faq-answer">Answer: The system uses JavaScript’s <b>crypto.getRandomValues()</b> function to generate random numbers, ensuring a high level of security and fairness. Here is the code snippet used:</p>
+                        <img src="assets/code-snippet.JPG" class="img-fluid code-snippet"/>
+                        <p class="faq-answer">This function generates a random integer between the specified min and max values. It uses the <b>crypto.getRandomValues()</b> method to produce cryptographically secure random numbers, ensuring a fair and unbiased selection process.</p>
+                        <p class="faq-answer add-margin"> To understand more about how JavaScript’s <b>crypto.getRandomValues()</b> works, feel free to conduct your own research and study. There are many resources available online that explain its usage and benefits in detail.</p>
+                      </div>
+                      <div class="faq-group">
+                        <p class="faq-question">Question 4: What is my probability of winning?</p>
+                        <p class="faq-answer">Answer: Your probability of winning depends on the total number of entries in the raffle. If there are ( n ) entries and you have submitted ( k ) entries, your probability of winning is calculated as:</p>
+                        <img src="assets/probability.JPG" class="img-fluid code-snippet"/>
+                        <p class="faq-answer add-margin">For example, if there are 5 entries in total and you have 1 entry, your probability of winning is:</p>
+                        <p class="faq-answer">(1 / 5)100 = <b>20%</b></p>
+                        <p class="faq-answer add-margin">Another example, if there are 100 entries in total and you have 1 entry, your probability of winning is:</p>
+                        <p class="faq-answer">(1 / 100)100 = <b>1%</b></p>
+                        <p class="faq-answer add-margin">Another example, if there are 2500 entries in total and you have 1 entry, your probability of winning is:</p>
+                        <p class="faq-answer">(1 / 2500)100 = <b>0.04%</b></p>
+                      </div>
+                      <div class="faq-group">
+                        <p class="faq-question">Question 5: What happens if I refresh the browser during the raffle?</p>
+                        <p class="faq-answer">Answer: If you refresh the browser during the raffle, the progress will restart because the system will unload the Excel file and lose track of the recorded winners. If this happens, all previously picked winners will have a chance to be picked again. To avoid this, please refrain from refreshing the browser during the raffle process.</p>
+                      </div>
+                      <div class="faq-group">
+                        <p class="faq-question">Question 6: What if the device (Laptop/Desktop) encounters technical issues like a blue screen or sudden shutdown?</p>
+                        <p class="faq-answer">Answer: If the device encounters technical issues such as a blue screen or sudden shutdown, the raffle progress will be interrupted. This means the system will lose track of the recorded winners, and all previously picked winners will have a chance to be picked again once the system is restarted. To minimize the risk of such issues, ensure your device is in good working condition and consider using a backup power source.</p>
+                      </div>
+                      <div class="faq-group">
+                        <p class="faq-question">Question 7: Is my personal information safe?</p>
+                        <p class="faq-answer">Answer: Yes, we take privacy and security seriously. Your personal information is stored securely and used only for the purposes of the raffle. The only participant information collected is what is included in the uploaded Excel file: Employee ID, Name, Department, and Division.</p>
+                      </div>
+                      <div class="faq-group">
+                        <p class="faq-question">Question 8: What are the PROS of using an Automated Raffle System?</p>
+                        <p class="faq-answer"><b>Efficiency</b>: Automates the process of collecting entries, drawing winners, and notifying participants, saving time and effort.</p>
+                        <p class="faq-answer"><b>Fairness</b>: Uses secure algorithms to ensure random and unbiased winner selection.</p>
+                        <p class="faq-answer"><b>Scalability</b>: Can handle a large number of entries without manual intervention.</p>
+                        <p class="faq-answer"><b>Convenience</b>: Participants can enter the raffle from anywhere, and organizers can manage the raffle online.</p>
+                        <p class="faq-answer"><b>Transparency</b>: Provides a clear and auditable process for selecting winners.</p>
+                      </div>
+                      <div class="faq-group">
+                        <p class="faq-question">Question 9: What are the CONS of using an Automated Raffle System?</p>
+                        <p class="faq-answer"><b>Technical Issues</b>: System reliability depends on the hardware and software. Issues like blue screens or sudden shutdowns can disrupt the raffle.</p>
+                        <p class="faq-answer"><b>Learning Curve</b>: Users who are digitally inexperienced may need time to trust and understand how to use the system effectively.</p>
+                        <p class="faq-answer"><b>Dependency on Technology</b>: Requires a stable internet connection and functioning hardware.</p>
+                      </div>
+                      <div class="faq-group">
+                        <p class="faq-question">Question 10: What are the PROS of a Manual Raffle Draw?</p>
+                        <p class="faq-answer"><b>Simplicity</b>: Easy to understand and execute without the need for technical knowledge.</p>
+                        <p class="faq-answer"><b>Transparency</b>: The physical drawing process can be observed by participants, enhancing trust.</p>
+                        <p class="faq-answer"><b>No Technical Issues</b>: Eliminates the risk of technical failures such as software crashes or power outages.</p>
+                      </div>
+                      <div class="faq-group">
+                        <p class="faq-question">Question 11: What are the CONS of a Manual Raffle Draw?</p>
+                        <p class="faq-answer"><b>Time-Consuming</b>: Requires more time and effort to collect entries, conduct the draw, and notify winners.</p>
+                        <p class="faq-answer"><b>Human Error</b>: Prone to mistakes in entry collection and winner selection.</p>
+                        <p class="faq-answer"><b>Limited Scalability</b>: Difficult to manage a large number of entries manually.</p>
+                        <p class="faq-answer"><b>Logistics</b>: Requires physical presence and resources to conduct the draw and distribute prizes.</p>
+                      </div>
+                      <div class="faq-group">
+                        <p class="faq-question">Question 12:  What if users are not comfortable with technology or do not trust the fairness of the automated raffle system?</p>
+                        <p class="faq-answer">Answer: It is understandable that some individuals may be afraid of technology or may not trust the fairness of an automated system. This system uses secure and transparent methods to ensure fairness and integrity in the raffle process. The usage of the automated raffle system is completely optional and requires the approval of the HR Department.</p>
+                      </div>
+                    </div>
+                    <div class="dup-message">
+                      <p class="dup-title">Frequently Asked Questions (FAQ)</p>
+                      <button type="button" class="btn btn-dark btn-dup" data-bs-dismiss="modal">CLOSE</button>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
 
 
     <footer></footer>

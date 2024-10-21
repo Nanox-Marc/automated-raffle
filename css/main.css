@@ -11936,6 +11936,10 @@ body {
   font-weight: 500;
   border: solid 2px #4d5154;
   padding: 3px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .modal-winners .modal-dialog {
@@ -12092,7 +12096,7 @@ body {
 .duplicate-modal .modal-dialog .modal-content .modal-body .dup-cover-file {
   width: 100%;
   height: 100%;
-  background-image: url(../assets/no-excel.png);
+  background-image: url(../assets/no-excel1.png);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -12240,6 +12244,12 @@ body {
   font-size: 20px;
   text-transform: uppercase;
   font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.instruction-modal .modal-dialog .modal-content .modal-body .instruction-container .instruction-title .bi {
+  margin-right: 10px;
 }
 .instruction-modal .modal-dialog .modal-content .modal-body .instruction-container .instruction-text {
   font-size: 16px;
@@ -12250,11 +12260,90 @@ body {
   padding-left: 40px;
   padding-right: 40px;
 }
+.instruction-modal .modal-dialog .modal-content .modal-body .carousel-control-prev-icon {
+  background-color: black;
+  padding: 25px 0;
+  border-radius: 8px;
+}
+.instruction-modal .modal-dialog .modal-content .modal-body .carousel-control-next-icon {
+  background-color: black;
+  padding: 25px 0;
+  border-radius: 8px;
+}
 .instruction-modal .modal-dialog .modal-content .modal-body .carousel-instruction-btn {
   width: 50px;
 }
 .instruction-modal .modal-dialog .modal-content .modal-body .carousel-indicators {
   position: relative;
+}
+
+.faq-modal .modal-dialog {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.faq-modal .modal-dialog .modal-content {
+  width: 900px;
+}
+.faq-modal .modal-dialog .modal-content .modal-body {
+  height: 540px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.faq-modal .modal-dialog .modal-content .modal-body .dup-cover-file {
+  width: 100%;
+  height: 100%;
+  background-color: #232222;
+  padding: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+.faq-modal .modal-dialog .modal-content .modal-body .dup-cover-file .faq-group {
+  color: white;
+  padding-bottom: 30px;
+}
+.faq-modal .modal-dialog .modal-content .modal-body .dup-cover-file .faq-group .faq-question {
+  background-color: rgba(255, 255, 255, 0.1607843137);
+  width: fit-content;
+  padding: 0px 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.faq-modal .modal-dialog .modal-content .modal-body .dup-cover-file .faq-group .faq-answer {
+  margin-left: 20px;
+}
+.faq-modal .modal-dialog .modal-content .modal-body .dup-cover-file .faq-group .code-snippet {
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.faq-modal .modal-dialog .modal-content .modal-body .dup-cover-file .faq-group .add-margin {
+  margin-top: 10px;
+}
+.faq-modal .modal-dialog .modal-content .modal-body .dup-message {
+  padding: 15px 0;
+  width: 100%;
+  text-align: center;
+  line-height: 35px;
+}
+.faq-modal .modal-dialog .modal-content .modal-body .dup-message .dup-title {
+  font-size: 35px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: darkslategray;
+}
+.faq-modal .modal-dialog .modal-content .modal-body .dup-message .dup-text {
+  font-size: 20px;
+}
+.faq-modal .modal-dialog .modal-content .modal-body .dup-message .btn-dup {
+  padding: 8px 50px;
+  border-radius: 3px;
+  margin-top: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */

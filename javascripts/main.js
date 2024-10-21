@@ -63,6 +63,7 @@ $(document).ready( function () {
 
 input.addEventListener('change', () => {
   readXlsxFile(input.files[0]).then((rows) => {
+
     const excelFileName = input.files.item(0).name;
     const employeeCount = (rows.length)-1;
     document.getElementById("displayFileName").innerHTML = "SOURCE FILE: " + excelFileName;
@@ -84,14 +85,24 @@ document.getElementById('random-button').addEventListener('click', () => {
       // Total Count of Employee
       const employeeCount = (rows.length)-1;
       const hasInputRaffle = document.getElementById("raffleItem").value;
+      const trimHasInputRaffle = hasInputRaffle.trim();
 
-      if(hasInputRaffle != "") {
+      // Function to generate random integer between the specified min and max values.
+      function getRandomInt(min, max) {
+        const crypto = window.crypto || window.msCrypto;
+        const array = new Uint32Array(1);
+        crypto.getRandomValues(array);
+        return min + (array[0] % (max - min + 1));
+      }
+
+      if(trimHasInputRaffle != "") {
           //random pick for the lucky winner. This is the X Axis.
           let randomNumber;
           if(generatedNumbers.size != employeeCount) {
             do {
                   // Generate a random number between 1 and 100
-                  randomNumber = Math.floor(Math.random() * employeeCount) + 1;
+                  randomNumber = getRandomInt(1, employeeCount);
+                  // randomNumber = Math.floor(Math.random() * employeeCount) + 1;
               } while (generatedNumbers.has(randomNumber));
       
               if(developerMode){
