@@ -11919,6 +11919,7 @@ body {
   width: 210px;
   padding: 0;
   padding-bottom: 10px;
+  margin-bottom: 10px !important;
 }
 .home .raffle-container .settings-group .timer-group {
   display: flex;
@@ -12319,6 +12320,8 @@ body {
 .faq-modal .modal-dialog .modal-content .modal-body .dup-cover-file .faq-group {
   color: white;
   padding-bottom: 30px;
+  border-bottom: solid 1px gainsboro;
+  margin-bottom: 30px;
 }
 .faq-modal .modal-dialog .modal-content .modal-body .dup-cover-file .faq-group .faq-question {
   background-color: rgba(255, 255, 255, 0.6784313725);
