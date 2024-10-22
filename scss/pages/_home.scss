@@ -145,6 +145,10 @@ body {
       }
     }
   }
+
+  .mobile-view {
+    display: none;
+  }
 }
 
 .modal-winners {
@@ -602,7 +606,7 @@ body {
               padding: 0px 10px;
               font-weight: 500;
               text-transform: uppercase;
-              margin-bottom: 10px;
+              margin-bottom: 15px;
             }
 
             .faq-answer {
@@ -621,6 +625,7 @@ body {
 
             .faq-slant {
               font-style: italic;
+              color: gray;
             }
           }
         }
@@ -648,6 +653,73 @@ body {
             margin-top: 10px;
           }
         }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .modal {
+    padding: 30px;
+  }
+
+  .instruction-modal .modal-dialog .modal-content .modal-body .instruction-container .carousel-part-dev {
+    height: 210px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .modal {
+    padding: 15px;
+  }
+
+  .instruction-modal .modal-dialog .modal-content .modal-body .instruction-container .carousel-part-dev {
+    height: 210px;
+  }
+
+  .home {
+    .raffle-container {
+      .raffle-prize {
+        width: 100%;
+      }
+
+      .btn-random {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .home {
+    .raffle-container {
+      display: none;
+    }
+
+    .mobile-view {
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      flex-direction: column;
+
+      .ars-image {
+        border: solid 1px white;
+        margin-top: -50px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      }
+
+      .mobile-view-text {
+        color: white;
+        font-size: 17px;
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .btn-mobile {
+        margin-top: 20px;
+        padding: 5px 30px;
       }
     }
   }

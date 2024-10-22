@@ -1,11 +1,8 @@
-# Template
-This is template for front-end projects
+## About the Author
 
-git init
-git add .
-git commit -m "initial commit"
-git remote add origin https://github.com/RichardBarreda/Template.git
+Hi there! I’m Richard Marck Barreda, an IT Support and a Web developer with a passion for creating engaging and user-friendly web interfaces.
 
----------
-git config credential.username "RichardBarreda"
-git config user.name "RichardBarreda"
+You can find more about my work on https://richardbarreda.github.io/web-portfolio/ or connect with me on github https://github.com/RichardBarreda
+
+Feel free to reach out if you have any questions or suggestions!
+
