@@ -75,15 +75,30 @@ $("#themeBtn").click(function(){
     $('#displayWinnerBody').addClass('display-theme-red');
   }
   else if(theme == "theme-red") {
-    theme = "theme-silver";
+    theme = "theme-yellow";
     $('#appBody').removeClass('theme-red');
-    $('#appBody').addClass('theme-silver');
+    $('#appBody').addClass('theme-yellow');
 
     $('#themeBtn').removeClass('btn-theme-red');
-    $('#themeBtn').addClass('btn-theme-silver');
+    $('#themeBtn').addClass('btn-theme-yellow');
 
     $('#displayWinnerBody').removeClass('display-theme-red');
+    $('#displayWinnerBody').addClass('display-theme-yellow');
+
+    $('#random-button').addClass('btn-gold-only');
+  }
+  else if(theme == "theme-yellow") {
+    theme = "theme-silver";
+    $('#appBody').removeClass('theme-yellow');
+    $('#appBody').addClass('theme-silver');
+
+    $('#themeBtn').removeClass('btn-theme-yellow');
+    $('#themeBtn').addClass('btn-theme-silver');
+
+    $('#displayWinnerBody').removeClass('display-theme-yellow');
     $('#displayWinnerBody').addClass('display-theme-silver');
+
+    $('#random-button').removeClass('btn-gold-only');
   }
 
 

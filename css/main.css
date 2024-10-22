@@ -11873,6 +11873,10 @@ body {
   background-image: url(../assets/red-christmas.jpg);
 }
 
+.theme-yellow {
+  background-image: url(../assets/yellow-christmas.jpg);
+}
+
 .home .raffle-container {
   height: 100vh;
   width: 100%;
@@ -11913,6 +11917,9 @@ body {
   color: white;
   text-transform: uppercase;
   font-size: 25px;
+}
+.home .raffle-container .btn-gold-only {
+  background-color: #7b72d5 !important;
 }
 .home .raffle-container .btn-excel-format {
   border: none;
@@ -11976,6 +11983,11 @@ body {
 .home .raffle-container .settings-group .timer-group .btn-theme-red {
   color: #c30205;
   background-color: #c30205;
+  border: solid 1px black;
+}
+.home .raffle-container .settings-group .timer-group .btn-theme-yellow {
+  color: goldenrod;
+  background-color: goldenrod;
   border: solid 1px black;
 }
 .home .raffle-container .settings-group .timer-title {
@@ -12108,6 +12120,10 @@ body {
 }
 .modal-random .modal-dialog .modal-content .display-theme-red {
   background-image: url(../assets/winner-bg-green.jpeg);
+  background-position: center;
+}
+.modal-random .modal-dialog .modal-content .display-theme-yellow {
+  background-image: url(../assets/winner-bg-gold.jpg);
   background-position: center;
 }
 
