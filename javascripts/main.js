@@ -6,6 +6,7 @@ let drumRollActive = false;
 let developerMode = false;
 let drumBtnLabel = "";
 let devBtnLabel = "";
+let theme = "theme-silver";
 var drumRollWinner = document.getElementById("winnerAudio"); 
 
 // Setting Timer On or Off (Drum Rolls)
@@ -37,6 +38,55 @@ $("#devModeBtn").click(function(){
     $('#devModeBtn').addClass('btn-outline-dark');
   }
   document.getElementById("devModeBtn").innerHTML = devBtnLabel;
+});
+
+$("#themeBtn").click(function(){
+  if(theme == "theme-silver") {
+    theme = "theme-gold";
+    $('#appBody').removeClass('theme-silver');
+    $('#appBody').addClass('theme-gold');
+
+    $('#themeBtn').removeClass('btn-theme-silver');
+    $('#themeBtn').addClass('btn-theme-gold');
+
+    $('#displayWinnerBody').removeClass('display-theme-silver');
+    $('#displayWinnerBody').addClass('display-theme-gold');
+  } 
+  else if(theme == "theme-gold") {
+    theme = "theme-green";
+    $('#appBody').removeClass('theme-gold');
+    $('#appBody').addClass('theme-green');
+
+    $('#themeBtn').removeClass('btn-theme-gold');
+    $('#themeBtn').addClass('btn-theme-green');
+
+    $('#displayWinnerBody').removeClass('display-theme-gold');
+    $('#displayWinnerBody').addClass('display-theme-green');
+  }
+  else if(theme == "theme-green") {
+    theme = "theme-red";
+    $('#appBody').removeClass('theme-green');
+    $('#appBody').addClass('theme-red');
+
+    $('#themeBtn').removeClass('btn-theme-green');
+    $('#themeBtn').addClass('btn-theme-red');
+
+    $('#displayWinnerBody').removeClass('display-theme-green');
+    $('#displayWinnerBody').addClass('display-theme-red');
+  }
+  else if(theme == "theme-red") {
+    theme = "theme-silver";
+    $('#appBody').removeClass('theme-red');
+    $('#appBody').addClass('theme-silver');
+
+    $('#themeBtn').removeClass('btn-theme-red');
+    $('#themeBtn').addClass('btn-theme-silver');
+
+    $('#displayWinnerBody').removeClass('display-theme-red');
+    $('#displayWinnerBody').addClass('display-theme-silver');
+  }
+
+
 });
 
 

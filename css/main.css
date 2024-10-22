@@ -11852,10 +11852,25 @@ body {
   height: 100vh;
   width: 100%;
   max-width: 100%;
-  background-image: url(../assets/background.jpg);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.theme-silver {
+  background-image: url(../assets/background.jpg);
+}
+
+.theme-gold {
+  background-image: url(../assets/black-bg.jpg);
+}
+
+.theme-green {
+  background-image: url(../assets/green-christmas.jpg);
+}
+
+.theme-red {
+  background-image: url(../assets/red-christmas.jpg);
 }
 
 .home .raffle-container {
@@ -11943,6 +11958,26 @@ body {
   align-items: center;
   text-align: center;
 }
+.home .raffle-container .settings-group .timer-group .btn-theme-silver {
+  color: #071d34;
+  background-color: #071d34;
+  border: solid 1px black;
+}
+.home .raffle-container .settings-group .timer-group .btn-theme-gold {
+  color: #2d2e2f;
+  background-color: #2d2e2f;
+  border: solid 1px black;
+}
+.home .raffle-container .settings-group .timer-group .btn-theme-green {
+  color: #297863;
+  background-color: #297863;
+  border: solid 1px black;
+}
+.home .raffle-container .settings-group .timer-group .btn-theme-red {
+  color: #c30205;
+  background-color: #c30205;
+  border: solid 1px black;
+}
 .home .raffle-container .settings-group .timer-title {
   background-color: #273e59;
   border-radius: 5px;
@@ -11984,7 +12019,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(../assets/winner-bg4.jpg);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -12061,6 +12095,20 @@ body {
   background-color: crimson;
   cursor: pointer;
   color: white;
+}
+.modal-random .modal-dialog .modal-content .display-theme-silver {
+  background-image: url(../assets/winner-bg4.jpg);
+}
+.modal-random .modal-dialog .modal-content .display-theme-gold {
+  background-image: url(../assets/winner-bg-gold.jpg);
+}
+.modal-random .modal-dialog .modal-content .display-theme-green {
+  background-image: url(../assets/winner-bg-green.jpeg);
+  background-position: center;
+}
+.modal-random .modal-dialog .modal-content .display-theme-red {
+  background-image: url(../assets/winner-bg-green.jpeg);
+  background-position: center;
 }
 
 .duplicate-modal .hide {
