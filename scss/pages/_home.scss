@@ -28,6 +28,10 @@ body {
   background-image: url(../assets/yellow-christmas.jpg);
 }
 
+.theme-purple {
+  background-image: url(../assets/purple-default.jpg);
+}
+
 .home {
   .raffle-container {
     height: 100vh;
@@ -39,10 +43,11 @@ body {
     text-align: center;
     color: white;
 
-    .nanox-logo {
-      max-width: 230px;
+    .ars-logo {
+      max-width: 330px;
       filter: brightness(0) invert(1);
       margin-bottom: 50px;
+      margin-left: 50px;
     }
 
     .hide {
@@ -77,7 +82,7 @@ body {
     }
 
     .btn-gold-only {
-      background-color: #7b72d5!important;
+      background-color: #483ea9 !important;
     }
 
     .btn-excel-format {
@@ -180,6 +185,12 @@ body {
         .btn-theme-yellow {
           color: goldenrod;
           background-color: goldenrod;
+          border: solid 1px black;
+        }
+
+        .btn-theme-purple {
+          color: #670a8f;
+          background-color: #670a8f;
           border: solid 1px black;
         }
         
@@ -348,6 +359,11 @@ body {
 
       .display-theme-yellow {
         background-image: url(../assets/winner-bg-gold.jpg);
+        background-position: center;
+      }
+
+      .display-theme-purple {
+        background-image: url(../assets/winner-bg-purple.jpg);
         background-position: center;
       }
 

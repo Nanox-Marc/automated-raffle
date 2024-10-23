@@ -4,8 +4,10 @@ const generatedNumbers = new Set();
 var clickCount = 0;
 let drumRollActive = false;
 let developerMode = false;
+let fullscreenMode = false;
 let drumBtnLabel = "";
 let devBtnLabel = "";
+let fullscreenLabel = "";
 let theme = "theme-silver";
 var drumRollWinner = document.getElementById("winnerAudio"); 
 
@@ -40,7 +42,9 @@ $("#devModeBtn").click(function(){
   document.getElementById("devModeBtn").innerHTML = devBtnLabel;
 });
 
-$("#themeBtn").click(function(){
+$("#themeBtn").click(function(event){
+  event.stopPropagation();
+
   if(theme == "theme-silver") {
     theme = "theme-gold";
     $('#appBody').removeClass('theme-silver');
@@ -88,22 +92,49 @@ $("#themeBtn").click(function(){
     $('#random-button').addClass('btn-gold-only');
   }
   else if(theme == "theme-yellow") {
-    theme = "theme-silver";
+    theme = "theme-purple";
     $('#appBody').removeClass('theme-yellow');
-    $('#appBody').addClass('theme-silver');
+    $('#appBody').addClass('theme-purple');
 
     $('#themeBtn').removeClass('btn-theme-yellow');
-    $('#themeBtn').addClass('btn-theme-silver');
+    $('#themeBtn').addClass('btn-theme-purple');
 
     $('#displayWinnerBody').removeClass('display-theme-yellow');
-    $('#displayWinnerBody').addClass('display-theme-silver');
+    $('#displayWinnerBody').addClass('display-theme-purple');
 
     $('#random-button').removeClass('btn-gold-only');
   }
 
+  else if(theme == "theme-purple") {
+    theme = "theme-silver";
+    $('#appBody').removeClass('theme-purple');
+    $('#appBody').addClass('theme-silver');
+
+    $('#themeBtn').removeClass('btn-theme-purple');
+    $('#themeBtn').addClass('btn-theme-silver');
+
+    $('#displayWinnerBody').removeClass('display-theme-purple');
+    $('#displayWinnerBody').addClass('display-theme-silver');
+  }
 
 });
 
+$("#fullScreenMode").click(function(){
+  fullscreenMode = !fullscreenMode;
+
+  if(fullscreenMode == true) {
+    fullscreenLabel = "ON";
+    fullScreen();
+    $('#fullScreenMode').removeClass('btn-outline-dark');
+    $('#fullScreenMode').addClass('btn-dark');
+  } else {
+    fullscreenLabel = "OFF";
+    exitFullScreen();
+    $('#fullScreenMode').removeClass('btn-dark');
+    $('#fullScreenMode').addClass('btn-outline-dark');
+  }
+  document.getElementById("fullScreenMode").innerHTML = fullscreenLabel;
+});
 
 $(document).ready( function () {
 
@@ -139,6 +170,12 @@ input.addEventListener('change', () => {
       $('#excelFormat').modal('hide');
     } );
 
+    // fullscreenMode = true;
+    // fullscreenLabel = "ON";
+    fullScreen();
+    // $('#fullScreenMode').removeClass('btn-outline-dark');
+    // $('#fullScreenMode').addClass('btn-dark');
+    // document.getElementById("fullScreenMode").innerHTML = fullscreenLabel;
   })
 })
 
@@ -276,3 +313,47 @@ $("#btnClaim").click(function(){
  const table = new DataTable('#winnersTbl');
  addNewRow();
 });
+
+
+function fullScreen() {
+  if (document.documentElement.requestFullscreen) {
+    document.documentElement.requestFullscreen();
+  } else if (document.documentElement.mozRequestFullScreen) { // Firefox
+    document.documentElement.mozRequestFullScreen();
+  } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
+    document.documentElement.webkitRequestFullscreen();
+  } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+    document.documentElement.msRequestFullscreen();
+  }
+};
+
+function exitFullScreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.mozCancelFullScreen) { // Firefox
+    document.mozCancelFullScreen();
+  } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { // IE/Edge
+    document.msExitFullscreen();
+  }
+};
+
+function checkFullscreen() {
+
+  if (window.innerHeight == screen.height) {
+    fullscreenLabel = "ON";
+    fullscreenMode = true;
+    $('#fullScreenMode').removeClass('btn-outline-dark');
+    $('#fullScreenMode').addClass('btn-dark');
+  } else {
+    fullscreenLabel = "OFF";
+    fullscreenMode = false;
+    $('#fullScreenMode').removeClass('btn-dark');
+    $('#fullScreenMode').addClass('btn-outline-dark');
+  }
+
+  document.getElementById("fullScreenMode").innerHTML = fullscreenLabel;
+}
+
+// window.addEventListener('resize', checkFullscreen);

@@ -11877,6 +11877,10 @@ body {
   background-image: url(../assets/yellow-christmas.jpg);
 }
 
+.theme-purple {
+  background-image: url(../assets/purple-default.jpg);
+}
+
 .home .raffle-container {
   height: 100vh;
   width: 100%;
@@ -11887,10 +11891,11 @@ body {
   text-align: center;
   color: white;
 }
-.home .raffle-container .nanox-logo {
-  max-width: 230px;
+.home .raffle-container .ars-logo {
+  max-width: 330px;
   filter: brightness(0) invert(1);
   margin-bottom: 50px;
+  margin-left: 50px;
 }
 .home .raffle-container .hide {
   display: none;
@@ -11919,7 +11924,7 @@ body {
   font-size: 25px;
 }
 .home .raffle-container .btn-gold-only {
-  background-color: #7b72d5 !important;
+  background-color: #483ea9 !important;
 }
 .home .raffle-container .btn-excel-format {
   border: none;
@@ -11988,6 +11993,11 @@ body {
 .home .raffle-container .settings-group .timer-group .btn-theme-yellow {
   color: goldenrod;
   background-color: goldenrod;
+  border: solid 1px black;
+}
+.home .raffle-container .settings-group .timer-group .btn-theme-purple {
+  color: #670a8f;
+  background-color: #670a8f;
   border: solid 1px black;
 }
 .home .raffle-container .settings-group .timer-title {
@@ -12124,6 +12134,10 @@ body {
 }
 .modal-random .modal-dialog .modal-content .display-theme-yellow {
   background-image: url(../assets/winner-bg-gold.jpg);
+  background-position: center;
+}
+.modal-random .modal-dialog .modal-content .display-theme-purple {
+  background-image: url(../assets/winner-bg-purple.jpg);
   background-position: center;
 }
 

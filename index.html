@@ -42,13 +42,13 @@
 
     <main class="home">
       <div class="container raffle-container">
-        <img src="assets/app-logo.png" class="img-fluid nanox-logo"/>
+        <img src="assets/ars-logo.png" class="img-fluid ars-logo"/>
         <button type="button" class="btn btn-light" id="uploadExcelFileHere" data-bs-toggle="modal" data-bs-target="#excelFormat"> UPLOAD EXCEL FILE </button>
         <p class="file-name" id="displayFileName"></p>
         <input class="form-control raffle-prize" type="text" id="raffleItem" placeholder="INPUT RAFFLE ITEM" value="">
         <button type="button" class="btn btn-random" id="random-button">GENERATE WINNER</button>
         <!-- data-bs-toggle="modal" data-bs-target="#staticBackdrop" -->
-        <p class="file-name total-label">Picking 1 Employee out of : <span id="employeeSize"></span></p>
+        <p class="file-name total-label">Picking 1 Lucky Participant out of : <span id="employeeSize"></span></p>
         <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#winnerModalList">
           VIEW WINNERS
         </button>
@@ -64,7 +64,7 @@
                 <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
               </svg>
             </button>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu" id="settingsBody">
               
               <div class="timer-group timer-title">
                 <p class="timer-text">SETTINGS</p>
@@ -84,6 +84,11 @@
                 <p class="timer-text">DEV MODE</p>
                 <button type="button" class="btn btn-outline-dark drum-btn" id="devModeBtn"> OFF </button>
               </div>
+
+              <!-- <div class="timer-group">
+                <p class="timer-text">FULLSCREEN</p>
+                <button type="button" class="btn btn-outline-dark drum-btn" id="fullScreenMode"> OFF </button>
+              </div> -->
 
               <div class="timer-group">
                 <p class="timer-text">INSTRUCTIONS</p>
@@ -428,25 +433,29 @@
                         <p class="faq-answer">(1 / 2500)100 = <b>0.04%</b></p>
                       </div>
                       <div class="faq-group">
-                        <p class="faq-question">Question 5: What happens if I refresh the browser during the raffle?</p>
+                        <p class="faq-question">Question 5: How to Fullscreen my browser?</p>
+                        <p class="faq-answer">Answer: For Windows/Linux: Press F11 on your keyboard. If you are using Mac: Press Control + Command + F. - This works on all modern browsers, including: Google Chrome, Mozilla Firefox, Microsoft Edge, and Safari.</p>
+                      </div>
+                      <div class="faq-group">
+                        <p class="faq-question">Question 6: What happens if I refresh the browser during the raffle?</p>
                         <p class="faq-answer">Answer: If the user refresh the browser during the raffle, the progress will restart because the system will unload the Excel file and lose track of the recorded winners. If this happens, all previously picked winners will have a chance to be picked again once the user of the system uploaded the same Excel File. To avoid this, please refrain from refreshing the browser during the raffle process.</p>
                         <p class="faq-answer add-margin faq-slant">** If a technical incident occurs (ex: unexpected refresh of the browser),  upload a new Excel file without the names of the previous winners to ensure they are not picked again. **</p>
                       </div>
                       <div class="faq-group">
-                        <p class="faq-question">Question 6: What if the device (Laptop/Desktop) encounters technical issues?</p>
+                        <p class="faq-question">Question 7: What if the device (Laptop/Desktop) encounters technical issues?</p>
                         <p class="faq-answer">Answer: If the device encounters technical issues such as a blue screen or sudden shutdown, the raffle progress will be interrupted. This means the system will lose track of the recorded winners, and all previously picked winners will have a chance to be picked again once the system is restarted. To minimize the risk of such issues, ensure your device is in good working condition and consider using a backup power source.</p>
                         <p class="faq-answer add-margin faq-slant">** If a technical incident occurs (ex: unexpected device shutdown),  upload a new Excel file without the names of the previous winners to ensure they are not picked again. **</p>
                       </div>
                       <div class="faq-group">
-                        <p class="faq-question">Question 7: I want to upload a new Excel but there is current file active in the system?</p>
+                        <p class="faq-question">Question 8: I want to upload a new Excel but there is current file active in the system?</p>
                         <p class="faq-answer">Answer: Just refresh the browser to unload the current uploaded Excel File on the system, but remember doing this will restart the progress of your raffle draw.</p>
                       </div>
                       <div class="faq-group">
-                        <p class="faq-question">Question 8: Is my personal information safe?</p>
+                        <p class="faq-question">Question 9: Is my personal information safe?</p>
                         <p class="faq-answer">Answer: Yes, we take privacy and security seriously. Your personal information is stored securely and used only for the purposes of the raffle. The only participant information collected is what is included in the uploaded Excel file: Employee ID, Name, Department, and Division.</p>
                       </div>
                       <div class="faq-group">
-                        <p class="faq-question">Question 9: What are the PROS of using an Automated Raffle System?</p>
+                        <p class="faq-question">Question 10: What are the PROS of using an Automated Raffle System?</p>
                         <p class="faq-answer"><b>Efficiency</b>: Automates the process of collecting entries, drawing winners, and notifying participants, saving time and effort.</p>
                         <p class="faq-answer"><b>Fairness</b>: Uses secure algorithms to ensure random and unbiased winner selection.</p>
                         <p class="faq-answer"><b>Scalability</b>: Can handle a large number of entries without manual intervention.</p>
@@ -454,26 +463,26 @@
                         <p class="faq-answer"><b>Transparency</b>: Provides a clear and auditable process for selecting winners.</p>
                       </div>
                       <div class="faq-group">
-                        <p class="faq-question">Question 10: What are the CONS of using an Automated Raffle System?</p>
+                        <p class="faq-question">Question 11: What are the CONS of using an Automated Raffle System?</p>
                         <p class="faq-answer"><b>Technical Issues</b>: System reliability depends on the hardware and software. Issues like blue screens or sudden shutdowns can disrupt the raffle.</p>
                         <p class="faq-answer"><b>Learning Curve</b>: Users who are digitally inexperienced may need time to trust and understand how to use the system effectively.</p>
                         <p class="faq-answer"><b>Dependency on Technology</b>: Requires a stable internet connection and functioning hardware.</p>
                       </div>
                       <div class="faq-group">
-                        <p class="faq-question">Question 11: What are the PROS of a Manual Raffle Draw?</p>
+                        <p class="faq-question">Question 12: What are the PROS of a Manual Raffle Draw?</p>
                         <p class="faq-answer"><b>Simplicity</b>: Easy to understand and execute without the need for technical knowledge.</p>
                         <p class="faq-answer"><b>Transparency</b>: The physical drawing process can be observed by participants, enhancing trust.</p>
                         <p class="faq-answer"><b>No Technical Issues</b>: Eliminates the risk of technical failures such as software crashes or power outages.</p>
                       </div>
                       <div class="faq-group">
-                        <p class="faq-question">Question 12: What are the CONS of a Manual Raffle Draw?</p>
+                        <p class="faq-question">Question 13: What are the CONS of a Manual Raffle Draw?</p>
                         <p class="faq-answer"><b>Time-Consuming</b>: Requires more time and effort to collect entries, conduct the draw, and notify winners.</p>
                         <p class="faq-answer"><b>Human Error</b>: Prone to mistakes in entry collection and winner selection.</p>
                         <p class="faq-answer"><b>Limited Scalability</b>: Difficult to manage a large number of entries manually.</p>
                         <p class="faq-answer"><b>Logistics</b>: Requires physical presence and resources to conduct the draw and distribute prizes.</p>
                       </div>
                       <div class="faq-group">
-                        <p class="faq-question">Question 13:  What if users are not comfortable with technology or do not trust the fairness of the automated raffle system?</p>
+                        <p class="faq-question">Question 14:  What if users are not comfortable with technology or do not trust the fairness of the automated raffle system?</p>
                         <p class="faq-answer">Answer: It is understandable that some individuals may be afraid of technology or may not trust the fairness of an automated system. This system uses secure and transparent methods to ensure fairness and integrity in the raffle process. The usage of the automated raffle system is completely optional and requires the approval of the HR Department.</p>
                       </div>
                     </div>
