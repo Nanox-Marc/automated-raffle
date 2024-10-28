@@ -265,7 +265,7 @@
               
                 <div class="modal-body drum-roll-body">
                     <div class="dup-cover-drum">
-                      <p class="dup-title dup-winner-drum-title">THE WINNER IS</p>
+                      <!-- <p class="dup-title dup-winner-drum-title">THE WINNER IS</p> -->
                     </div>
                 </div>
               
@@ -337,7 +337,7 @@
                             <div class="carousel-item">
                               <div class="instruction-container">
                                 <div class="carousel-part carousel-part-image">
-                                  <img src="assets/raffle-alert.gif" class="img-fluid carousel-image announcement-image"/>
+                                  <img src="assets/raffle-alert.gif" class="img-fluid carousel-image announcement-image-a"/>
                                 </div>
                                 <div class="carousel-part">
                                   <p class="instruction-title">
@@ -418,6 +418,14 @@
                         <p class="faq-question">Question 3: How does the system ensure randomness in winner selection?</p>
                         <p class="faq-answer">Answer: The system uses JavaScript’s <b>crypto.getRandomValues()</b> function to generate random numbers, ensuring a high level of security and fairness. Here is the code snippet used:</p>
                         <img src="assets/code-snippet.JPG" class="img-fluid code-snippet"/>
+                        
+                        <p class="faq-answer add-margin"><b>GENERATE RANDOM NUMBER:</b></p>
+                        <div class="faq-random-sip"> 
+                          <div class="faq-random-group"><p>MINIMUM:</p> <input type="number" class="form-control faq-input" value="1" id="faqMinVal"> </div>
+                          <div class="faq-random-group"><p>MAXIMUM:</p> <input type="number" class="form-control faq-input" value="" id="faqMaxVal"> </div>
+                          <div class="faq-random-group btn-random-group"><button type="button" class="btn btn-ran btn-light" id="faqTryRan">GENERATE</button> <p class="faq-result-random">RESULT: <span id="faqRanResult">00000</span></p></div>
+                        </div> <br><br>
+
                         <p class="faq-answer">This function generates a random integer between the specified min and max values. It uses the <b>crypto.getRandomValues()</b> method to produce cryptographically secure random numbers, ensuring a fair and unbiased selection process.</p>
                         <p class="faq-answer add-margin"> To understand more about how JavaScript’s <b>crypto.getRandomValues()</b> works, feel free to conduct your own research and study. There are many resources available online that explain its usage and benefits in detail.</p>
                       </div>

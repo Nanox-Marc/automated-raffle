@@ -190,19 +190,19 @@ document.getElementById('random-button').addEventListener('click', () => {
       const trimHasInputRaffle = hasInputRaffle.trim();
 
       // Function to generate random integer between the specified min and max values.
-      function getRandomInt(min, max) {
-        const crypto = window.crypto || window.msCrypto;
-        const array = new Uint32Array(1);
-        crypto.getRandomValues(array);
-        return min + (array[0] % (max - min + 1));
-      }
+      // function getRandomInt(min, max) {
+      //   const crypto = window.crypto || window.msCrypto;
+      //   const array = new Uint32Array(1);
+      //   crypto.getRandomValues(array);
+      //   return min + (array[0] % (max - min + 1));
+      // }
 
       if(trimHasInputRaffle != "") {
           //random pick for the lucky winner. This is the X Axis.
           let randomNumber;
           if(generatedNumbers.size != employeeCount) {
             do {
-                  // Generate a random number between 1 and 100
+                  // Generate a random number between 1 and maximum possible
                   randomNumber = getRandomInt(1, employeeCount);
                   // randomNumber = Math.floor(Math.random() * employeeCount) + 1;
               } while (generatedNumbers.has(randomNumber));
@@ -314,6 +314,27 @@ $("#btnClaim").click(function(){
  addNewRow();
 });
 
+$("#faqTryRan").click(function(){
+  const tryMin = parseInt(document.getElementById("faqMinVal").value);
+  const tryMax = parseInt(document.getElementById("faqMaxVal").value);
+
+  if(tryMax <= 9999999999 && tryMax > tryMin) {
+    const tryResult = getRandomInt(tryMin, tryMax);
+    document.getElementById("faqRanResult").innerHTML = tryResult;
+  } else if(tryMax <= tryMin) {
+    alert("Hmmmm, looks like your Minimum number is greater than or equal to the Maximum number.");
+  } else {
+    alert("Please limit your maximum number to below 9,999,999,999");
+  }
+  
+});
+
+function getRandomInt(min, max) {
+  const crypto = window.crypto || window.msCrypto;
+  const array = new Uint32Array(1);
+  crypto.getRandomValues(array);
+  return min + (array[0] % (max - min + 1));
+}
 
 function fullScreen() {
   if (document.documentElement.requestFullscreen) {
@@ -355,5 +376,7 @@ function checkFullscreen() {
 
   document.getElementById("fullScreenMode").innerHTML = fullscreenLabel;
 }
+
+
 
 // window.addEventListener('resize', checkFullscreen);
