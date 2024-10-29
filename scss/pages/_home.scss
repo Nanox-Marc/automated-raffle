@@ -32,6 +32,10 @@ body {
   background-image: url(../assets/purple-default.jpg);
 }
 
+.theme-neon {
+  background-image: url(../assets/neon-background.jpg);
+}
+
 .home {
   .raffle-container {
     height: 100vh;
@@ -193,6 +197,12 @@ body {
           background-color: #670a8f;
           border: solid 1px black;
         }
+
+        .btn-theme-neon {
+          color: #91dbf4;
+          background-color: #91dbf4;
+          border: solid 1px black;
+        }
         
       }
 
@@ -308,15 +318,15 @@ body {
 
         .btn-claim {
           margin-top: 20px;
-          background-color: transparent;
+          background-color: goldenrod;
           font-size: 20px;
-          border: solid 2px darkslateblue;
-          color: darkslateblue;
+          border: solid 2px goldenrod;
+          color: white;
           font-weight: 500;
           border-radius: 3px;
 
           &:hover {
-            background-color: darkslateblue;
+            background-color: goldenrod;
             cursor: pointer;
             color: white;
           }
@@ -367,6 +377,11 @@ body {
 
       .display-theme-purple {
         background-image: url(../assets/winner-bg-purple.jpg);
+        background-position: center;
+      }
+
+      .display-theme-neon {
+        background-image: url(../assets/winner-bg-neon.jpg);
         background-position: center;
       }
 
@@ -731,7 +746,7 @@ body {
               }
 
               .faq-input {
-                width: 115px;
+                width: 100px;
                 padding: 2px 0;
                 text-align: center;
                 margin-left: 5px;

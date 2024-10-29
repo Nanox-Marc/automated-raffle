@@ -11881,6 +11881,10 @@ body {
   background-image: url(../assets/purple-default.jpg);
 }
 
+.theme-neon {
+  background-image: url(../assets/neon-background.jpg);
+}
+
 .home .raffle-container {
   height: 100vh;
   width: 100%;
@@ -12000,6 +12004,11 @@ body {
   background-color: #670a8f;
   border: solid 1px black;
 }
+.home .raffle-container .settings-group .timer-group .btn-theme-neon {
+  color: #91dbf4;
+  background-color: #91dbf4;
+  border: solid 1px black;
+}
 .home .raffle-container .settings-group .timer-title {
   background-color: #273e59;
   border-radius: 5px;
@@ -12093,15 +12102,15 @@ body {
 }
 .modal-random .modal-dialog .modal-content .modal-body .btn-claim {
   margin-top: 20px;
-  background-color: transparent;
+  background-color: goldenrod;
   font-size: 20px;
-  border: solid 2px darkslateblue;
-  color: darkslateblue;
+  border: solid 2px goldenrod;
+  color: white;
   font-weight: 500;
   border-radius: 3px;
 }
 .modal-random .modal-dialog .modal-content .modal-body .btn-claim:hover {
-  background-color: darkslateblue;
+  background-color: goldenrod;
   cursor: pointer;
   color: white;
 }
@@ -12141,6 +12150,10 @@ body {
 }
 .modal-random .modal-dialog .modal-content .display-theme-purple {
   background-image: url(../assets/winner-bg-purple.jpg);
+  background-position: center;
+}
+.modal-random .modal-dialog .modal-content .display-theme-neon {
+  background-image: url(../assets/winner-bg-neon.jpg);
   background-position: center;
 }
 
@@ -12438,7 +12451,7 @@ body {
   -moz-appearance: textfield;
 }
 .faq-modal .modal-dialog .modal-content .modal-body .dup-cover-file .faq-group .faq-random-sip .faq-input {
-  width: 115px;
+  width: 100px;
   padding: 2px 0;
   text-align: center;
   margin-left: 5px;

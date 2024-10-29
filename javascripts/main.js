@@ -34,6 +34,7 @@ $("#devModeBtn").click(function(){
     devBtnLabel = "ON"
     $('#devModeBtn').removeClass('btn-outline-dark');
     $('#devModeBtn').addClass('btn-dark');
+    alert("DEVELOPER MODE IS ACTIVATED \n \nRandom computer generated number will be shown on the screen before revealing of the winner. \n \nPURPOSE: To counter check and confirm if the random computer generated number is matched on the excel row number of the winner.");
   } else {
     devBtnLabel = "OFF"
     $('#devModeBtn').removeClass('btn-dark');
@@ -106,14 +107,26 @@ $("#themeBtn").click(function(event){
   }
 
   else if(theme == "theme-purple") {
-    theme = "theme-silver";
+    theme = "theme-neon";
     $('#appBody').removeClass('theme-purple');
-    $('#appBody').addClass('theme-silver');
+    $('#appBody').addClass('theme-neon');
 
     $('#themeBtn').removeClass('btn-theme-purple');
-    $('#themeBtn').addClass('btn-theme-silver');
+    $('#themeBtn').addClass('btn-theme-neon');
 
     $('#displayWinnerBody').removeClass('display-theme-purple');
+    $('#displayWinnerBody').addClass('display-theme-neon');
+  }
+
+  else if(theme == "theme-neon") {
+    theme = "theme-silver";
+    $('#appBody').removeClass('theme-neon');
+    $('#appBody').addClass('theme-silver');
+
+    $('#themeBtn').removeClass('btn-theme-neon');
+    $('#themeBtn').addClass('btn-theme-silver');
+
+    $('#displayWinnerBody').removeClass('display-theme-neon');
     $('#displayWinnerBody').addClass('display-theme-silver');
   }
 
@@ -315,17 +328,36 @@ $("#btnClaim").click(function(){
 });
 
 $("#faqTryRan").click(function(){
-  const tryMin = parseInt(document.getElementById("faqMinVal").value);
-  const tryMax = parseInt(document.getElementById("faqMaxVal").value);
+    const tryMin = parseInt(document.getElementById("faqMinVal").value);
+    const tryMax = parseInt(document.getElementById("faqMaxVal").value);
 
-  if(tryMax <= 9999999999 && tryMax > tryMin) {
-    const tryResult = getRandomInt(tryMin, tryMax);
-    document.getElementById("faqRanResult").innerHTML = tryResult;
-  } else if(tryMax <= tryMin) {
-    alert("Hmmmm, looks like your Minimum number is greater than or equal to the Maximum number.");
+    if(tryMax <= 9999999999 && tryMax > tryMin) {
+      const tryResult = getRandomInt(tryMin, tryMax);
+      document.getElementById("faqRanResult").innerHTML = tryResult;
+    } else if(tryMax < tryMin) {
+      alert("Hmmmm, looks like your Minimum number is greater than or equal to the Maximum number.");
+    } else if(tryMax == tryMin) {
+      alert("Hmmmmmm looks like you have inputed the same number for the minimum and maximum.");
+    } else {
+      alert("Please limit your maximum number to below 9,999,999,999");
+    }
+});
+
+$("#faqTryProb").click(function(){
+  const tryEmpEnt = parseInt(document.getElementById("faqEmpEnt").value);
+  const tryTotEnt = parseInt(document.getElementById("faqTotEnt").value);
+
+  if(tryEmpEnt < tryTotEnt) {
+    const tryProbResult = (tryEmpEnt/tryTotEnt)*100;
+    if (tryProbResult !== Math.floor(tryProbResult)) {
+      document.getElementById("faqProbResult").innerHTML = tryProbResult.toFixed(4);
+    } else {
+      document.getElementById("faqProbResult").innerHTML = tryProbResult;
+    }  
   } else {
-    alert("Please limit your maximum number to below 9,999,999,999");
+    alert("Hmmmm, looks like your Raffle Entry is greater than or equal to the Total Entry.");
   }
+  
   
 });
 
