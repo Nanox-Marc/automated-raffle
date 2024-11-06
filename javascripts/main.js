@@ -119,14 +119,26 @@ $("#themeBtn").click(function(event){
   }
 
   else if(theme == "theme-neon") {
-    theme = "theme-silver";
+    theme = "theme-street";
     $('#appBody').removeClass('theme-neon');
-    $('#appBody').addClass('theme-silver');
+    $('#appBody').addClass('theme-street');
 
     $('#themeBtn').removeClass('btn-theme-neon');
-    $('#themeBtn').addClass('btn-theme-silver');
+    $('#themeBtn').addClass('btn-theme-street');
 
     $('#displayWinnerBody').removeClass('display-theme-neon');
+    $('#displayWinnerBody').addClass('display-theme-street');
+  }
+
+  else if(theme == "theme-street") {
+    theme = "theme-silver";
+    $('#appBody').removeClass('theme-street');
+    $('#appBody').addClass('theme-silver');
+
+    $('#themeBtn').removeClass('btn-theme-street');
+    $('#themeBtn').addClass('btn-theme-silver');
+
+    $('#displayWinnerBody').removeClass('display-theme-street');
     $('#displayWinnerBody').addClass('display-theme-silver');
   }
 

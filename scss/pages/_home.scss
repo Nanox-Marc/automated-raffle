@@ -34,6 +34,11 @@ body {
 
 .theme-neon {
   background-image: url(../assets/neon-background.jpg);
+  background-size: 100% 100%;
+}
+
+.theme-street {
+  background-image: url(../assets/street-background.jpg);
 }
 
 .home {
@@ -199,8 +204,14 @@ body {
         }
 
         .btn-theme-neon {
-          color: #91dbf4;
-          background-color: #91dbf4;
+          color: #55e94e;
+          background-color: #55e94e;
+          border: solid 1px black;
+        }
+
+        .btn-theme-street {
+          color: rgb(44, 132, 204);
+          background-color: rgb(44, 132, 204);
           border: solid 1px black;
         }
         
@@ -326,9 +337,9 @@ body {
           border-radius: 3px;
 
           &:hover {
-            background-color: goldenrod;
+            background-color: white;
             cursor: pointer;
-            color: white;
+            color: goldenrod;
           }
         }
 
@@ -382,6 +393,11 @@ body {
 
       .display-theme-neon {
         background-image: url(../assets/winner-bg-neon.jpg);
+        background-position: center;
+      }
+
+      .display-theme-street {
+        background-image: url(../assets/winner-bg-street.jpg);
         background-position: center;
       }
 

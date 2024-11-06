@@ -11883,6 +11883,11 @@ body {
 
 .theme-neon {
   background-image: url(../assets/neon-background.jpg);
+  background-size: 100% 100%;
+}
+
+.theme-street {
+  background-image: url(../assets/street-background.jpg);
 }
 
 .home .raffle-container {
@@ -12005,8 +12010,13 @@ body {
   border: solid 1px black;
 }
 .home .raffle-container .settings-group .timer-group .btn-theme-neon {
-  color: #91dbf4;
-  background-color: #91dbf4;
+  color: #55e94e;
+  background-color: #55e94e;
+  border: solid 1px black;
+}
+.home .raffle-container .settings-group .timer-group .btn-theme-street {
+  color: rgb(44, 132, 204);
+  background-color: rgb(44, 132, 204);
   border: solid 1px black;
 }
 .home .raffle-container .settings-group .timer-title {
@@ -12110,9 +12120,9 @@ body {
   border-radius: 3px;
 }
 .modal-random .modal-dialog .modal-content .modal-body .btn-claim:hover {
-  background-color: goldenrod;
+  background-color: white;
   cursor: pointer;
-  color: white;
+  color: goldenrod;
 }
 .modal-random .modal-dialog .modal-content .modal-body .btn-redraw {
   position: absolute;
@@ -12154,6 +12164,10 @@ body {
 }
 .modal-random .modal-dialog .modal-content .display-theme-neon {
   background-image: url(../assets/winner-bg-neon.jpg);
+  background-position: center;
+}
+.modal-random .modal-dialog .modal-content .display-theme-street {
+  background-image: url(../assets/winner-bg-street.jpg);
   background-position: center;
 }
 
