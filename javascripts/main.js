@@ -3,9 +3,11 @@ const winnerList = [];
 const generatedNumbers = new Set();
 var clickCount = 0;
 let drumRollActive = false;
+let raffleNumberOnly = false;
 let developerMode = false;
 let fullscreenMode = false;
 let drumBtnLabel = "";
+let raffleNumBtnLabel = "";
 let devBtnLabel = "";
 let fullscreenLabel = "";
 let theme = "theme-silver";
@@ -25,6 +27,23 @@ $("#drumRollBtn").click(function(){
     $('#drumRollBtn').addClass('btn-outline-dark');
   }
   document.getElementById("drumRollBtn").innerHTML = drumBtnLabel;
+});
+
+// Display Raffle No. Only
+$("#raffleNumBtn").click(function(){
+  raffleNumberOnly = !raffleNumberOnly;
+
+  if(raffleNumberOnly == true) {
+    raffleNumBtnLabel = "ON"
+    $('#raffleNumBtn').removeClass('btn-outline-dark');
+    $('#raffleNumBtn').addClass('btn-dark');
+    $('#displayRaffleNoOnly').modal('show');
+  } else {
+    raffleNumBtnLabel = "OFF"
+    $('#raffleNumBtn').removeClass('btn-dark');
+    $('#raffleNumBtn').addClass('btn-outline-dark');
+  }
+  document.getElementById("raffleNumBtn").innerHTML = raffleNumBtnLabel;
 });
 
 $("#devModeBtn").click(function(){
@@ -243,6 +262,7 @@ document.getElementById('random-button').addEventListener('click', () => {
               //setting the excel index. This is the Y Axis
               const indexEmployeeId = 1;
               const indexFirstName = 2;
+              const indexRaflleNumber = 7;
               const indexLastName = 4;
               const indexDivision = 6;
               const indexDepartment = 5;
@@ -251,10 +271,19 @@ document.getElementById('random-button').addEventListener('click', () => {
               const winnerEmployeeID = rows[randomNumber][indexEmployeeId];
               const winnerFirstName = rows[randomNumber][indexFirstName];
               const winnerLastName = rows[randomNumber][indexLastName];
-              const winnerFullName = winnerFirstName + " " + winnerLastName;
+              let winnerFullName = winnerFirstName + " " + winnerLastName;
               const winnerDivision = rows[randomNumber][indexDivision];
               const winnerDepartment = rows[randomNumber][indexDepartment];
               const WinnerPriceItem = document.getElementById("raffleItem").value;
+
+              if(raffleNumberOnly) {
+                winnerFullName = rows[randomNumber][indexRaflleNumber];
+                $('#nameOrRaffleNo').addClass('raffleNumberOnly');
+                $('#dmWinner').addClass('raffle-number');
+              } else {
+                $('#nameOrRaffleNo').removeClass('raffleNumberOnly');
+                $('#dmWinner').removeClass('raffle-number');
+              }
       
       
               if (!winnerList.includes(winnerEmployeeID)) {

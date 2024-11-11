@@ -297,6 +297,11 @@ body {
           text-align: center;
         }
 
+        .raffle-number {
+          font-size: 150px;
+          line-height: 130px;
+        }
+
         .display-details {
           text-align: center;
           font-size: 25px;
@@ -313,6 +318,10 @@ body {
           .dd-user {
             margin: 0 10px;
           }
+        }
+
+        .raffleNumberOnly {
+          display: none;
         }
 
         .display-prize {

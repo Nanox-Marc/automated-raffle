@@ -76,6 +76,11 @@
               </div>
 
               <div class="timer-group">
+                <p class="timer-text">RAFFLE NUMBER</p>
+                <button type="button" class="btn btn-outline-dark drum-btn" id="raffleNumBtn"> OFF </button>
+              </div>
+
+              <div class="timer-group">
                 <p class="timer-text">DRUM ROLL</p>
                 <button type="button" class="btn btn-outline-dark drum-btn" id="drumRollBtn"> OFF </button>
               </div>
@@ -164,7 +169,7 @@
             <p class="display-congrats">congratulations!</p>
             <div class="display-group">
               <p class="display-name" id="dmWinner"></p>
-              <div class="display-details"><p class="dd-user" id="dmDepartment"></p> <p class="dd-user">-</p> <p class="dd-user" id="dmIdNumber"></p></div>
+              <div class="display-details" id="nameOrRaffleNo"><p class="dd-user" id="dmDepartment"></p> <p class="dd-user">-</p> <p class="dd-user" id="dmIdNumber"></p></div>
             </div>
             <p class="display-prize">FOR WINNING: <span id="dmPrize"></span></p>
             <button type="button" class="btn btn-secondary btn-claim" id="btnClaim" data-bs-dismiss="modal">CLAIM PRIZE</button>
@@ -250,6 +255,27 @@
                         <label for="input" class="upload-btn">PROCEED WITH UPLOAD</label>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCEL</button>
                       </div>
+                      
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+
+    <!-- Excel Format Modal for Raffle Number Only -->
+    <div class="modal fade duplicate-modal" id="displayRaffleNoOnly" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="excelFormatLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              
+                <div class="modal-body">
+                    <div class="dup-cover-format">
+                      <img src="assets/ins-raffle-number.JPG" class="img-fluid nanox-logo"/>
+                    </div>
+                    <div class="dup-message">
+                      <p class="dup-title">RAFFLE NUMBER WILL BE DISPLAY</p>
+                      <p class="dup-text-format">Instead of the usual Individual's <b>Full Name, ID Number, and Department,</b> the information will be shown after the raffle draw will be <b>Raffle Number</b> assigned to the winner. Make sure to include the <b>Raffle Number Column</b> on the right side of the Division Column of the Employee List Excel File.</p>
+                      <button type="button" class="btn btn-secondary btn-dup" data-bs-dismiss="modal">OKAY</button>
                       
                     </div>
                 </div>
